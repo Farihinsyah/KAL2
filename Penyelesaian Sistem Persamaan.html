@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Penyelesaian Sistem Persamaan Linier 3 Variabel dengan Eliminasi Gauss &#8212; My sample book</title>
+    <title>Penyelesaian Sistem Persamaan &#8212; My sample book</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Penyelesaian Sistem Persamaan';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -179,10 +181,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian Sistem Persamaan Linier 3 Variabel dengan Eliminasi Gauss</a></li>
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian Sistem Persamaan</a></li>
 </ul>
 
     </div>
@@ -368,7 +367,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Penyelesaian Sistem Persamaan Linier 3 Variabel dengan Eliminasi Gauss</h1>
+    <h1>Penyelesaian Sistem Persamaan</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,12 +377,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Penyelesaian Sistem Persamaan Linier 3 Variabel dengan Eliminasi Gauss</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-satu-solusi">1. Contoh Sistem dengan Satu Solusi</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-banyak-solusi">2. Contoh Sistem dengan Banyak Solusi</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-tidak-ada-solusi">3. Contoh Sistem dengan Tidak Ada Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linier-3-variabel-dengan-eliminasi-gauss">Penyelesaian Sistem Persamaan Linier 3 Variabel dengan Eliminasi Gauss</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-satu-solusi">1. Contoh Sistem dengan Satu Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-banyak-solusi">2. Contoh Sistem dengan Banyak Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-tidak-ada-solusi">3. Contoh Sistem dengan Tidak Ada Solusi</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -394,48 +392,54 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="penyelesaian-sistem-persamaan-linier-3-variabel-dengan-eliminasi-gauss">
-<h1>Penyelesaian Sistem Persamaan Linier 3 Variabel dengan Eliminasi Gauss<a class="headerlink" href="#penyelesaian-sistem-persamaan-linier-3-variabel-dengan-eliminasi-gauss" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="penyelesaian-sistem-persamaan">
+<h1>Penyelesaian Sistem Persamaan<a class="headerlink" href="#penyelesaian-sistem-persamaan" title="Link to this heading">#</a></h1>
+<section id="penyelesaian-sistem-persamaan-linier-3-variabel-dengan-eliminasi-gauss">
+<h2>Penyelesaian Sistem Persamaan Linier 3 Variabel dengan Eliminasi Gauss<a class="headerlink" href="#penyelesaian-sistem-persamaan-linier-3-variabel-dengan-eliminasi-gauss" title="Link to this heading">#</a></h2>
 <p>Sebuah sistem persamaan linier dengan 3 variabel bisa memiliki:</p>
 <ol class="arabic simple">
 <li><p><strong>Satu Solusi</strong> = Sistem memiliki solusi unik dan determinan matriks koefisien tidak sama dengan nol.</p></li>
 <li><p><strong>Banyak Solusi</strong> = Sistem memiliki solusi, tetapi ada variabel yang nilainya bebas atau tidak terikat.</p></li>
 <li><p><strong>Tidak Ada Solusi</strong> = Sistem tidak memiliki solusi karena terjadi pertentangan antar persamaan.</p></li>
 </ol>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="contoh-sistem-dengan-satu-solusi">
-<h1>1. Contoh Sistem dengan Satu Solusi<a class="headerlink" href="#contoh-sistem-dengan-satu-solusi" title="Link to this heading">#</a></h1>
+<h2>1. Contoh Sistem dengan Satu Solusi<a class="headerlink" href="#contoh-sistem-dengan-satu-solusi" title="Link to this heading">#</a></h2>
 <iframe src="https://www.geogebra.org/calculator/pnqnqstt" width="800" height="600" style="border:0;"></iframe>
 <p>Misalkan sistem persamaan:</p>
-<p>\begin{aligned}
-x + 2y + 3z = 6 \
-2x + 5y + 2z = 4 \
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x + 2y + 3z = 6 \\
+2x + 5y + 2z = 4 \\
 6x - 3y + z = 2
-\end{aligned}</p>
+\end{aligned}\end{split}\]</div>
 <p>Langkah 1: Tulis dalam bentuk matriks augmented</p>
-<p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
-2 &amp; 5 &amp; 2 &amp; \vert &amp; 4 \
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \\
+2 &amp; 5 &amp; 2 &amp; \vert &amp; 4 \\
 6 &amp; -3 &amp; 1 &amp; \vert &amp; 2
-\end{bmatrix}</p>
+\end{bmatrix}\end{split}\]</div>
 <p>Langkah 2: Eliminasi x pada baris 2 dan baris 3 (eliminasi kolom 1)</p>
 <p>Baris 2 = Baris 2 - 2 × Baris 1</p>
 <p>Baris 3 = Baris 3 - 6 × Baris 1</p>
 <p>Matriks menjadi:</p>
-<p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
-0 &amp; 1 &amp; -4 &amp; \vert &amp; -8 \
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \\
+0 &amp; 1 &amp; -4 &amp; \vert &amp; -8 \\
 0 &amp; -15 &amp; -17 &amp; \vert &amp; -34
-\end{bmatrix}</p>
+\end{bmatrix}\end{split}\]</div>
 <p>Langkah 3: Eliminasi y pada baris 3 (eliminasi kolom 2)</p>
 <p>Baris 3 = Baris 3 + 15 × Baris 2</p>
 <p>Matriks menjadi:</p>
-<p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
-0 &amp; 1 &amp; -4 &amp; \vert &amp; -8 \
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \\
+0 &amp; 1 &amp; -4 &amp; \vert &amp; -8 \\
 6 &amp; 0 &amp; -77 &amp; \vert &amp; -154
-\end{bmatrix}</p>
+\end{bmatrix}\end{split}\]</div>
 <p>Langkah 4: Substitusi Balik</p>
 <p>Dari baris 3:</p>
 <p>-77z = -154
@@ -449,28 +453,30 @@ x = 0</p>
 <p>(x, y, z) = (0, 0, 2)</p>
 </section>
 <section id="contoh-sistem-dengan-banyak-solusi">
-<h1>2. Contoh Sistem dengan Banyak Solusi<a class="headerlink" href="#contoh-sistem-dengan-banyak-solusi" title="Link to this heading">#</a></h1>
+<h2>2. Contoh Sistem dengan Banyak Solusi<a class="headerlink" href="#contoh-sistem-dengan-banyak-solusi" title="Link to this heading">#</a></h2>
 <iframe src="https://www.geogebra.org/3d/bvhb9bbj" width="800" height="600" style="border:0;"></iframe>
 <p>Misalkan sistem persamaan:
-\begin{aligned}
-x + 2y + 3z = 6 \
-2x + 4y + 6z = 12 \
+$<span class="math notranslate nohighlight">\(\begin{aligned}
+x + 2y + 3z = 6 \\
+2x + 4y + 6z = 12 \\
 3x + 6y + 9z = 18
-\end{aligned}</p>
+\end{aligned}\)</span>$</p>
 <p>Langkah 1: Tulis dalam bentuk matriks augmented</p>
-<p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
-2 &amp; 4 &amp; 6 &amp; \vert &amp; 12 \
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \\
+2 &amp; 4 &amp; 6 &amp; \vert &amp; 12 \\
 3 &amp; 6 &amp; 9 &amp; \vert &amp; 18
-\end{bmatrix}</p>
+\end{bmatrix}\end{split}\]</div>
 <p>Langkah 2: Eliminasi baris-baris di bawah baris 1</p>
 <p>Baris 2 = Baris 2 - 2 × Baris 1</p>
 <p>Matriks menjadi:</p>
-<p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
-0 &amp; 0 &amp; 0 &amp; \vert &amp; 0 \
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \\
+0 &amp; 0 &amp; 0 &amp; \vert &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; \vert &amp; 0
-\end{bmatrix}</p>
+\end{bmatrix}\end{split}\]</div>
 <p>Penyelesaian</p>
 <p>x = 6 - 2y - 3z</p>
 <p>Solusi umum:</p>
@@ -480,31 +486,34 @@ x + 2y + 3z = 6 \
 <p>Sistem memiliki tak hingga solusi bergantung pada y dan z</p>
 </section>
 <section id="contoh-sistem-dengan-tidak-ada-solusi">
-<h1>3. Contoh Sistem dengan Tidak Ada Solusi<a class="headerlink" href="#contoh-sistem-dengan-tidak-ada-solusi" title="Link to this heading">#</a></h1>
+<h2>3. Contoh Sistem dengan Tidak Ada Solusi<a class="headerlink" href="#contoh-sistem-dengan-tidak-ada-solusi" title="Link to this heading">#</a></h2>
 <iframe src="https://www.geogebra.org/calculator/qvvtwash" width="800" height="600" style="border:0;"></iframe>
 <p>Misalkan sistem persamaan:
-\begin{aligned}
-x + 2y + 3z = 6 \
-2x + 4y + 6z = 12 \
+$<span class="math notranslate nohighlight">\(\begin{aligned}
+x + 2y + 3z = 6 \\
+2x + 4y + 6z = 12 \\
 3x + 6y + 9z = 20
-\end{aligned}</p>
+\end{aligned}\)</span>$</p>
 <p>Langkah 1: Tulis dalam bentuk matriks augmented</p>
-<p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
-2 &amp; 4 &amp; 6 &amp; \vert &amp; 12 \
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \\
+2 &amp; 4 &amp; 6 &amp; \vert &amp; 12 \\
 3 &amp; 6 &amp; 9 &amp; \vert &amp; 20
-\end{bmatrix}</p>
+\end{bmatrix}\end{split}\]</div>
 <p>Langkah 2: Eliminasi x pada baris 2 dan baris 3</p>
 <p>Baris 2 = Baris 2 - 2 × Baris 1</p>
 <p>Matriks menjadi:</p>
-<p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
-0 &amp; 0 &amp; 0 &amp; \vert &amp; 0 \
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \\
+0 &amp; 0 &amp; 0 &amp; \vert &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; \vert &amp; 2
-\end{bmatrix}</p>
+\end{bmatrix}\end{split}\]</div>
 <p>Baris terakhir:</p>
 <p>0 = 2</p>
 <p>Sistem persamaan tidak memiliki solusi (tidak konsisten).</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -562,12 +571,11 @@ x + 2y + 3z = 6 \
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Penyelesaian Sistem Persamaan Linier 3 Variabel dengan Eliminasi Gauss</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-satu-solusi">1. Contoh Sistem dengan Satu Solusi</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-banyak-solusi">2. Contoh Sistem dengan Banyak Solusi</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-tidak-ada-solusi">3. Contoh Sistem dengan Tidak Ada Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linier-3-variabel-dengan-eliminasi-gauss">Penyelesaian Sistem Persamaan Linier 3 Variabel dengan Eliminasi Gauss</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-satu-solusi">1. Contoh Sistem dengan Satu Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-banyak-solusi">2. Contoh Sistem dengan Banyak Solusi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-sistem-dengan-tidak-ada-solusi">3. Contoh Sistem dengan Tidak Ada Solusi</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
