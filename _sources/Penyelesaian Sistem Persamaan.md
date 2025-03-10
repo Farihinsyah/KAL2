@@ -81,6 +81,7 @@ Hasil Akhir
 <iframe src="https://www.geogebra.org/3d/bvhb9bbj" width="800" height="600" style="border:0;"></iframe>
 
 Misalkan sistem persamaan:
+
 $$\begin{aligned}
 x + 2y + 3z = 6 \\
 2x + 4y + 6z = 12 \\
@@ -126,6 +127,7 @@ Sistem memiliki tak hingga solusi bergantung pada y dan z
 <iframe src="https://www.geogebra.org/calculator/qvvtwash" width="800" height="600" style="border:0;"></iframe>
 
 Misalkan sistem persamaan:
+
 $$\begin{aligned}
 x + 2y + 3z = 6 \\
 2x + 4y + 6z = 12 \\
