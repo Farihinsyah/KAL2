@@ -10,21 +10,25 @@ Sebuah sistem persamaan linier dengan 3 variabel bisa memiliki:
 3. **Tidak Ada Solusi** = Sistem tidak memiliki solusi karena terjadi pertentangan antar persamaan.
 ---
 ## 1. Contoh Sistem dengan Satu Solusi
-https://www.geogebra.org/calculator/pnqnqstt
+<iframe src="https://www.geogebra.org/calculator/pnqnqstt" width="800" height="600" style="border:0;"></iframe>
+
 Misalkan sistem persamaan:
-\
-\begin{cases}
+
+\begin{aligned}
 x + 2y + 3z = 6 \\
 2x + 5y + 2z = 4 \\
 6x - 3y + z = 2
-\end{cases}
+\end{aligned}
+
+
 Langkah 1: Tulis dalam bentuk matriks augmented
 
 \begin{bmatrix}
-1 & 2 & 3 & | & 6 \\
-2 & 5 & 2 & | & 4 \\
-6 & -3 & 1 & | & 2
+1 & 2 & 3 & \vert & 6 \\
+2 & 5 & 2 & \vert & 4 \\
+6 & -3 & 1 & \vert & 2
 \end{bmatrix}
+
 
 Langkah 2: Eliminasi x pada baris 2 dan baris 3 (eliminasi kolom 1)
 
@@ -35,10 +39,11 @@ Baris 3 = Baris 3 - 6 × Baris 1
 Matriks menjadi:
 
 \begin{bmatrix}
-1 & 2 & 3 & | & 6 \\
-0 & 1 & -4 & | & -8 \\
-0 & -15 & -17 & | & -34
+1 & 2 & 3 & \vert & 6 \\
+0 & 1 & -4 & \vert & -8 \\
+0 & -15 & -17 & \vert & -34
 \end{bmatrix}
+
 
 Langkah 3: Eliminasi y pada baris 3 (eliminasi kolom 2)
 
@@ -47,10 +52,11 @@ Baris 3 = Baris 3 + 15 × Baris 2
 Matriks menjadi:
 
 \begin{bmatrix}
-1 & 2 & 3 & | & 6 \\
-0 & 1 & -4 & | & -8 \\
-0 & 0 & -77 & | & -154
+1 & 2 & 3 & \vert & 6 \\
+0 & 1 & -4 & \vert & -8 \\
+6 & 0 & -77 & \vert & -154
 \end{bmatrix}
+
 
 Langkah 4: Substitusi Balik
 
@@ -71,21 +77,23 @@ Hasil Akhir
 
 (x, y, z) = (0, 0, 2)
 ## 2. Contoh Sistem dengan Banyak Solusi
-https://www.geogebra.org/3d/bvhb9bbj
+<iframe src="https://www.geogebra.org/3d/bvhb9bbj" width="800" height="600" style="border:0;"></iframe>
+
 Misalkan sistem persamaan:
-\begin{cases}
+\begin{aligned}
 x + 2y + 3z = 6 \\
 2x + 4y + 6z = 12 \\
 3x + 6y + 9z = 18
-\end{cases}
+\end{aligned}
 
 Langkah 1: Tulis dalam bentuk matriks augmented
 
 \begin{bmatrix}
-1 & 2 & 3 & | & 6 \\
-2 & 4 & 6 & | & 12 \\
-3 & 6 & 9 & | & 18
+1 & 2 & 3 & \vert & 6 \\
+2 & 4 & 6 & \vert & 12 \\
+3 & 6 & 9 & \vert & 18
 \end{bmatrix}
+
 
 Langkah 2: Eliminasi baris-baris di bawah baris 1
 
@@ -94,10 +102,11 @@ Baris 2 = Baris 2 - 2 × Baris 1
 Matriks menjadi:
 
 \begin{bmatrix}
-1 & 2 & 3 & | & 6 \\
-0 & 0 & 0 & | & 0 \\
-0 & 0 & 0 & | & 0
+1 & 2 & 3 & \vert & 6 \\
+0 & 0 & 0 & \vert & 0 \\
+0 & 0 & 0 & \vert & 0
 \end{bmatrix}
+
 
 Penyelesaian
 
@@ -113,19 +122,23 @@ z = z
 
 Sistem memiliki tak hingga solusi bergantung pada y dan z
 ## 3. Contoh Sistem dengan Tidak Ada Solusi
-https://www.geogebra.org/calculator/qvvtwash
+<iframe src="https://www.geogebra.org/calculator/qvvtwash" width="800" height="600" style="border:0;"></iframe>
+
 Misalkan sistem persamaan:
-\begin{cases}
+\begin{aligned}
 x + 2y + 3z = 6 \\
 2x + 4y + 6z = 12 \\
 3x + 6y + 9z = 20
-\end{cases}Langkah 1: Tulis dalam bentuk matriks augmented
+\end{aligned}
+
+Langkah 1: Tulis dalam bentuk matriks augmented
 
 \begin{bmatrix}
-1 & 2 & 3 & | & 6 \\
-2 & 4 & 6 & | & 12 \\
-3 & 6 & 9 & | & 20
+1 & 2 & 3 & \vert & 6 \\
+2 & 4 & 6 & \vert & 12 \\
+3 & 6 & 9 & \vert & 20
 \end{bmatrix}
+
 
 Langkah 2: Eliminasi x pada baris 2 dan baris 3
 
@@ -134,12 +147,11 @@ Baris 2 = Baris 2 - 2 × Baris 1
 Matriks menjadi:
 
 \begin{bmatrix}
-1 & 2 & 3 & | & 6 \\
-0 & 0 & 0 & | & 0 \\
-0 & 0 & 0 & | & 2
+1 & 2 & 3 & \vert & 6 \\
+0 & 0 & 0 & \vert & 0 \\
+0 & 0 & 0 & \vert & 2
 \end{bmatrix}
 
-Analisis
 
 Baris terakhir:
 

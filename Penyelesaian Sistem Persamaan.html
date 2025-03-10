@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Penyelesaian Sistem Persamaan';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to Koputasi Aljabar Linier" href="intro.html" />
+    <link rel="prev" title="Welcome to Komputasi Aljabar Linier" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,7 +174,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to Koputasi Aljabar Linier
+                    Welcome to Komputasi Aljabar Linier
                 </a>
             </li>
         </ul>
@@ -406,36 +406,35 @@ document.write(`
 </section>
 <section id="contoh-sistem-dengan-satu-solusi">
 <h1>1. Contoh Sistem dengan Satu Solusi<a class="headerlink" href="#contoh-sistem-dengan-satu-solusi" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="https://www.geogebra.org/calculator/pnqnqstt">https://www.geogebra.org/calculator/pnqnqstt</a>
-Misalkan sistem persamaan:
-<br />
-\begin{cases}
+<iframe src="https://www.geogebra.org/calculator/pnqnqstt" width="800" height="600" style="border:0;"></iframe>
+<p>Misalkan sistem persamaan:</p>
+<p>\begin{aligned}
 x + 2y + 3z = 6 \
 2x + 5y + 2z = 4 \
 6x - 3y + z = 2
-\end{cases}
-Langkah 1: Tulis dalam bentuk matriks augmented</p>
+\end{aligned}</p>
+<p>Langkah 1: Tulis dalam bentuk matriks augmented</p>
 <p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; | &amp; 6 \
-2 &amp; 5 &amp; 2 &amp; | &amp; 4 \
-6 &amp; -3 &amp; 1 &amp; | &amp; 2
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
+2 &amp; 5 &amp; 2 &amp; \vert &amp; 4 \
+6 &amp; -3 &amp; 1 &amp; \vert &amp; 2
 \end{bmatrix}</p>
 <p>Langkah 2: Eliminasi x pada baris 2 dan baris 3 (eliminasi kolom 1)</p>
 <p>Baris 2 = Baris 2 - 2 × Baris 1</p>
 <p>Baris 3 = Baris 3 - 6 × Baris 1</p>
 <p>Matriks menjadi:</p>
 <p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; | &amp; 6 \
-0 &amp; 1 &amp; -4 &amp; | &amp; -8 \
-0 &amp; -15 &amp; -17 &amp; | &amp; -34
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
+0 &amp; 1 &amp; -4 &amp; \vert &amp; -8 \
+0 &amp; -15 &amp; -17 &amp; \vert &amp; -34
 \end{bmatrix}</p>
 <p>Langkah 3: Eliminasi y pada baris 3 (eliminasi kolom 2)</p>
 <p>Baris 3 = Baris 3 + 15 × Baris 2</p>
 <p>Matriks menjadi:</p>
 <p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; | &amp; 6 \
-0 &amp; 1 &amp; -4 &amp; | &amp; -8 \
-0 &amp; 0 &amp; -77 &amp; | &amp; -154
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
+0 &amp; 1 &amp; -4 &amp; \vert &amp; -8 \
+6 &amp; 0 &amp; -77 &amp; \vert &amp; -154
 \end{bmatrix}</p>
 <p>Langkah 4: Substitusi Balik</p>
 <p>Dari baris 3:</p>
@@ -451,26 +450,26 @@ x = 0</p>
 </section>
 <section id="contoh-sistem-dengan-banyak-solusi">
 <h1>2. Contoh Sistem dengan Banyak Solusi<a class="headerlink" href="#contoh-sistem-dengan-banyak-solusi" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="https://www.geogebra.org/3d/bvhb9bbj">https://www.geogebra.org/3d/bvhb9bbj</a>
-Misalkan sistem persamaan:
-\begin{cases}
+<iframe src="https://www.geogebra.org/3d/bvhb9bbj" width="800" height="600" style="border:0;"></iframe>
+<p>Misalkan sistem persamaan:
+\begin{aligned}
 x + 2y + 3z = 6 \
 2x + 4y + 6z = 12 \
 3x + 6y + 9z = 18
-\end{cases}</p>
+\end{aligned}</p>
 <p>Langkah 1: Tulis dalam bentuk matriks augmented</p>
 <p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; | &amp; 6 \
-2 &amp; 4 &amp; 6 &amp; | &amp; 12 \
-3 &amp; 6 &amp; 9 &amp; | &amp; 18
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
+2 &amp; 4 &amp; 6 &amp; \vert &amp; 12 \
+3 &amp; 6 &amp; 9 &amp; \vert &amp; 18
 \end{bmatrix}</p>
 <p>Langkah 2: Eliminasi baris-baris di bawah baris 1</p>
 <p>Baris 2 = Baris 2 - 2 × Baris 1</p>
 <p>Matriks menjadi:</p>
 <p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; | &amp; 6 \
-0 &amp; 0 &amp; 0 &amp; | &amp; 0 \
-0 &amp; 0 &amp; 0 &amp; | &amp; 0
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
+0 &amp; 0 &amp; 0 &amp; \vert &amp; 0 \
+0 &amp; 0 &amp; 0 &amp; \vert &amp; 0
 \end{bmatrix}</p>
 <p>Penyelesaian</p>
 <p>x = 6 - 2y - 3z</p>
@@ -482,27 +481,27 @@ x + 2y + 3z = 6 \
 </section>
 <section id="contoh-sistem-dengan-tidak-ada-solusi">
 <h1>3. Contoh Sistem dengan Tidak Ada Solusi<a class="headerlink" href="#contoh-sistem-dengan-tidak-ada-solusi" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="https://www.geogebra.org/calculator/qvvtwash">https://www.geogebra.org/calculator/qvvtwash</a>
-Misalkan sistem persamaan:
-\begin{cases}
+<iframe src="https://www.geogebra.org/calculator/qvvtwash" width="800" height="600" style="border:0;"></iframe>
+<p>Misalkan sistem persamaan:
+\begin{aligned}
 x + 2y + 3z = 6 \
 2x + 4y + 6z = 12 \
 3x + 6y + 9z = 20
-\end{cases}Langkah 1: Tulis dalam bentuk matriks augmented</p>
+\end{aligned}</p>
+<p>Langkah 1: Tulis dalam bentuk matriks augmented</p>
 <p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; | &amp; 6 \
-2 &amp; 4 &amp; 6 &amp; | &amp; 12 \
-3 &amp; 6 &amp; 9 &amp; | &amp; 20
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
+2 &amp; 4 &amp; 6 &amp; \vert &amp; 12 \
+3 &amp; 6 &amp; 9 &amp; \vert &amp; 20
 \end{bmatrix}</p>
 <p>Langkah 2: Eliminasi x pada baris 2 dan baris 3</p>
 <p>Baris 2 = Baris 2 - 2 × Baris 1</p>
 <p>Matriks menjadi:</p>
 <p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; | &amp; 6 \
-0 &amp; 0 &amp; 0 &amp; | &amp; 0 \
-0 &amp; 0 &amp; 0 &amp; | &amp; 2
+1 &amp; 2 &amp; 3 &amp; \vert &amp; 6 \
+0 &amp; 0 &amp; 0 &amp; \vert &amp; 0 \
+0 &amp; 0 &amp; 0 &amp; \vert &amp; 2
 \end{bmatrix}</p>
-<p>Analisis</p>
 <p>Baris terakhir:</p>
 <p>0 = 2</p>
 <p>Sistem persamaan tidak memiliki solusi (tidak konsisten).</p>
@@ -544,7 +543,7 @@ x + 2y + 3z = 6 \
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to Koputasi Aljabar Linier</p>
+        <p class="prev-next-title">Welcome to Komputasi Aljabar Linier</p>
       </div>
     </a>
 </div>
