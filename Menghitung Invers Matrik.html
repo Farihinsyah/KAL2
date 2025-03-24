@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to Komputasi Aljabar Linier &#8212; My sample book</title>
+    <title>Menghitung Invers Matrik &#8212; My sample book</title>
   
   
   
@@ -59,10 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Menghitung Invers Matrik';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Penyelesaian Sistem Persamaan" href="Penyelesaian%20Sistem%20Persamaan.html" />
+    <link rel="prev" title="Penyelesaian Sistem Persamaan" href="Penyelesaian%20Sistem%20Persamaan.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,15 +174,15 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to Komputasi Aljabar Linier
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20Sistem%20Persamaan.html">Penyelesaian Sistem Persamaan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Menghitung%20Invers%20Matrik.html">Menghitung Invers Matrik</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Menghitung Invers Matrik</a></li>
 </ul>
 
     </div>
@@ -256,7 +254,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMenghitung Invers Matrik.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +284,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Menghitung Invers Matrik.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -368,7 +366,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to Komputasi Aljabar Linier</h1>
+    <h1>Menghitung Invers Matrik</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,23 +380,65 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-komputasi-aljabar-linier">
-<h1>Welcome to Komputasi Aljabar Linier<a class="headerlink" href="#welcome-to-komputasi-aljabar-linier" title="Link to this heading">#</a></h1>
-<p>Komputasi aljabar linier adalah cabang dari komputasi numerik yang berfokus pada pemecahan masalah-masalah matematika yang melibatkan sistem persamaan linear, matriks, dan vektor. Ini mencakup operasi seperti perkalian matriks, dekomposisi matriks, pencarian nilai eigen, dan pemecahan sistem persamaan linear.</p>
-<p>Di dunia komputasi, aljabar linier digunakan secara luas dalam berbagai aplikasi, seperti:</p>
-<ol class="arabic simple">
-<li><p>Grafika komputer: Transformasi gambar 2D dan 3D.</p></li>
-<li><p>Machine learning: Operasi pada dataset besar yang direpresentasikan sebagai matriks.</p></li>
-<li><p>Pemrosesan sinyal: Analisis suara dan gambar.</p></li>
-<li><p>Simulasi ilmiah: Pemodelan fisika dan dinamika sistem.</p></li>
-</ol>
-<p>Sebagian besar bahasa pemrograman modern seperti Python, MATLAB, dan Julia memiliki pustaka khusus untuk komputasi aljabar linier, seperti NumPy di Python.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20Sistem%20Persamaan.html">Penyelesaian Sistem Persamaan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Menghitung%20Invers%20Matrik.html">Menghitung Invers Matrik</a></li>
-</ul>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="menghitung-invers-matrik">
+<h1>Menghitung Invers Matrik<a class="headerlink" href="#menghitung-invers-matrik" title="Link to this heading">#</a></h1>
+<p>Membuat persamaan 3 variabel</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+4x+2y+6z=4 \\
+6x+2y+3z=6 \\
+2x+4y+2z=2
+\end{aligned}\end{split}\]</div>
+<p>Langkah 1 : Tuliskan dalam Bentuk Matriks Augmented
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+4 &amp; 2 &amp; 6 &amp; 1 &amp; 0 &amp; 0 \\
+6 &amp; 2 &amp; 3 &amp; 0 &amp; 1 &amp; 0 \\
+2 &amp; 4 &amp; 2 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}\)</span>$</p>
+<p>Langkah 2 : Baris pertama dibagi 4:
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; \frac{1}{2} &amp; \frac{3}{2} &amp; \frac{1}{4} &amp; 0 &amp; 0 \\
+6 &amp; 2 &amp; 3 &amp; 0 &amp; 1 &amp; 0 \\
+2 &amp; 4 &amp; 2 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}\)</span>$</p>
+<p>Langkah 3 : R2 = R2 - 6R1 dan R3 = R3 - 2R1
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; \frac{1}{2} &amp; \frac{3}{2} &amp; \frac{1}{4} &amp; 0 &amp; 0 \\
+0 &amp; -1 &amp; -6 &amp; -\frac{3}{2} &amp; 1 &amp; 0 \\
+0 &amp; 3 &amp; -1 &amp; -\frac{1}{2} &amp; 0 &amp; 1
+\end{bmatrix}\)</span>$</p>
+<p>Langkah 4 : R2 = R2 : -1
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; \frac{1}{2} &amp; \frac{3}{2} &amp; \frac{1}{4} &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 6 &amp; \frac{3}{2} &amp; -1 &amp; 0 \\
+0 &amp; 3 &amp; -1 &amp; -\frac{1}{2} &amp; 0 &amp; 1
+\end{bmatrix}\)</span>$</p>
+<p>Langkah 5 : R1 = R1 - <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> R2 dan R3 = R3 - 3R2
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 0 &amp; -2 &amp; -\frac{1}{2} &amp; \frac{1}{2} &amp; 0 \\
+0 &amp; 1 &amp; 6 &amp; \frac{3}{2} &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; -19 &amp; -5 &amp; 3 &amp; 1
+\end{bmatrix}\)</span>$</p>
+<p>Langkah 6 : R3 = R3 : -19
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 0 &amp; -2 &amp; -\frac{1}{2} &amp; \frac{1}{2} &amp; 0 \\
+0 &amp; 1 &amp; 6 &amp; \frac{3}{2} &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; \frac{5}{19} &amp; -\frac{3}{19} &amp; -\frac{1}{19}
+\end{bmatrix}\)</span>$</p>
+<p>Langkah 7 : R1 = R1 + 2R3 dan R2 = R2 - 6R3
+$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; -\frac{9}{19} &amp; \frac{8}{19} &amp; \frac{2}{19} \\
+0 &amp; 1 &amp; 0 &amp; \frac{3}{19} &amp; -\frac{3}{19} &amp; \frac{6}{19} \\
+0 &amp; 0 &amp; 1 &amp; \frac{5}{19} &amp; -\frac{3}{19} &amp; -\frac{1}{19}
+\end{bmatrix}\)</span>$</p>
+<p>Penyelesaian
+$<span class="math notranslate nohighlight">\(
+\begin{vmatrix} x1 \\ x2 \\ x3\end{vmatrix} =
+\begin{vmatrix} -\frac{9}{19} &amp; \frac{8}{19} &amp; \frac{2}{19} \\ \frac{3}{19} &amp; -\frac{3}{19} &amp; \frac{6}{19} \\ \frac{5}{19} &amp; -\frac{3}{19} &amp; -\frac{1}{19}\end{vmatrix}
+\begin{vmatrix} 4 \\ 6 \\ 2\end{vmatrix} =
+\begin{vmatrix} 0,842 \\ 0,3158 \\ 0\end{vmatrix} =
+\begin{vmatrix} 1 \\ 0 \\ 0\end{vmatrix}
+\)</span>$</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -431,14 +471,14 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="Penyelesaian%20Sistem%20Persamaan.html"
-       title="next page">
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Penyelesaian Sistem Persamaan</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
