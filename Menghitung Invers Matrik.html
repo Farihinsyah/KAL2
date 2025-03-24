@@ -389,56 +389,54 @@ document.write(`
 6x+2y+3z=6 \\
 2x+4y+2z=2
 \end{aligned}\end{split}\]</div>
-<p>Langkah 1 : Tuliskan dalam Bentuk Matriks Augmented
-$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+<p>Langkah 1 : Tuliskan dalam Bentuk Matriks Augmented</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
 4 &amp; 2 &amp; 6 &amp; 1 &amp; 0 &amp; 0 \\
 6 &amp; 2 &amp; 3 &amp; 0 &amp; 1 &amp; 0 \\
 2 &amp; 4 &amp; 2 &amp; 0 &amp; 0 &amp; 1
-\end{bmatrix}\)</span>$</p>
-<p>Langkah 2 : Baris pertama dibagi 4:
-$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+\end{bmatrix}\)</span></p>
+<p>Langkah 2 : Baris pertama dibagi 4:</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
 1 &amp; \frac{1}{2} &amp; \frac{3}{2} &amp; \frac{1}{4} &amp; 0 &amp; 0 \\
 6 &amp; 2 &amp; 3 &amp; 0 &amp; 1 &amp; 0 \\
 2 &amp; 4 &amp; 2 &amp; 0 &amp; 0 &amp; 1
-\end{bmatrix}\)</span>$</p>
-<p>Langkah 3 : R2 = R2 - 6R1 dan R3 = R3 - 2R1
-$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+\end{bmatrix}\)</span></p>
+<p>Langkah 3 : R2 = R2 - 6R1 dan R3 = R3 - 2R1</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
 1 &amp; \frac{1}{2} &amp; \frac{3}{2} &amp; \frac{1}{4} &amp; 0 &amp; 0 \\
 0 &amp; -1 &amp; -6 &amp; -\frac{3}{2} &amp; 1 &amp; 0 \\
 0 &amp; 3 &amp; -1 &amp; -\frac{1}{2} &amp; 0 &amp; 1
-\end{bmatrix}\)</span>$</p>
-<p>Langkah 4 : R2 = R2 : -1
-$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+\end{bmatrix}\)</span></p>
+<p>Langkah 4 : R2 = R2 : -1</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
 1 &amp; \frac{1}{2} &amp; \frac{3}{2} &amp; \frac{1}{4} &amp; 0 &amp; 0 \\
 0 &amp; 1 &amp; 6 &amp; \frac{3}{2} &amp; -1 &amp; 0 \\
 0 &amp; 3 &amp; -1 &amp; -\frac{1}{2} &amp; 0 &amp; 1
-\end{bmatrix}\)</span>$</p>
-<p>Langkah 5 : R1 = R1 - <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> R2 dan R3 = R3 - 3R2
-$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+\end{bmatrix}\)</span></p>
+<p>Langkah 5 : R1 = R1 - <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> R2 dan R3 = R3 - 3R2</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
 1 &amp; 0 &amp; -2 &amp; -\frac{1}{2} &amp; \frac{1}{2} &amp; 0 \\
 0 &amp; 1 &amp; 6 &amp; \frac{3}{2} &amp; -1 &amp; 0 \\
 0 &amp; 0 &amp; -19 &amp; -5 &amp; 3 &amp; 1
-\end{bmatrix}\)</span>$</p>
-<p>Langkah 6 : R3 = R3 : -19
-$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+\end{bmatrix}\)</span></p>
+<p>Langkah 6 : R3 = R3 : -19</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
 1 &amp; 0 &amp; -2 &amp; -\frac{1}{2} &amp; \frac{1}{2} &amp; 0 \\
 0 &amp; 1 &amp; 6 &amp; \frac{3}{2} &amp; -1 &amp; 0 \\
 0 &amp; 0 &amp; 1 &amp; \frac{5}{19} &amp; -\frac{3}{19} &amp; -\frac{1}{19}
-\end{bmatrix}\)</span>$</p>
-<p>Langkah 7 : R1 = R1 + 2R3 dan R2 = R2 - 6R3
-$<span class="math notranslate nohighlight">\(\begin{bmatrix}
+\end{bmatrix}\)</span></p>
+<p>Langkah 7 : R1 = R1 + 2R3 dan R2 = R2 - 6R3</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
 1 &amp; 0 &amp; 0 &amp; -\frac{9}{19} &amp; \frac{8}{19} &amp; \frac{2}{19} \\
 0 &amp; 1 &amp; 0 &amp; \frac{3}{19} &amp; -\frac{3}{19} &amp; \frac{6}{19} \\
 0 &amp; 0 &amp; 1 &amp; \frac{5}{19} &amp; -\frac{3}{19} &amp; -\frac{1}{19}
-\end{bmatrix}\)</span>$</p>
-<p>Penyelesaian
-$<span class="math notranslate nohighlight">\(
-\begin{vmatrix} x1 \\ x2 \\ x3\end{vmatrix} =
+\end{bmatrix}\)</span></p>
+<p>Penyelesaian</p>
+<p><span class="math notranslate nohighlight">\(\begin{vmatrix} x1 \\ x2 \\ x3\end{vmatrix} =
 \begin{vmatrix} -\frac{9}{19} &amp; \frac{8}{19} &amp; \frac{2}{19} \\ \frac{3}{19} &amp; -\frac{3}{19} &amp; \frac{6}{19} \\ \frac{5}{19} &amp; -\frac{3}{19} &amp; -\frac{1}{19}\end{vmatrix}
 \begin{vmatrix} 4 \\ 6 \\ 2\end{vmatrix} =
 \begin{vmatrix} 0,842 \\ 0,3158 \\ 0\end{vmatrix} =
-\begin{vmatrix} 1 \\ 0 \\ 0\end{vmatrix}
-\)</span>$</p>
+\begin{vmatrix} 1 \\ 0 \\ 0\end{vmatrix}\)</span></p>
 </section>
 
     <script type="text/x-thebe-config">
