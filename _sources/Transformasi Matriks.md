@@ -300,6 +300,12 @@ $A\vec{y} =
 7
 \end{bmatrix}$
 
+Hasil:
+$\vec{x} = (1,1)$
+$\vec{y} = (-1,2)$
+$A\vec{x} = (2,2)$
+$A\vec{y} = (-2,7)$
+
 **Nomor 5**
 
 Sketsa persegi satuan yang telah ditransformasikan diberikan. Temukan matriks $A$ yang melakukan transformasi ini 
