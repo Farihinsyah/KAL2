@@ -120,6 +120,64 @@ $A\vec{x} = \begin{bmatrix}
 3
 \end{bmatrix}$
 
+* **Menvisualisasikan Transformasi Matriks Menggunakan Vektor***
+
+Gambarkan vektor persegi satuan sebelum dan sesudah dikalikan dengan $A$. Di mana
+
+$A = \begin{bmatrix}
+1&4 \\
+2&3
+\end{bmatrix}$
+
+Solusi. Keempat sudut persegi satuan dapat direpresentasikan dengan vektor
+
+$\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}$, $\begin{bmatrix}
+1 \\
+0
+\end{bmatrix}$, $\begin{bmatrix}
+1 \\
+1
+\end{bmatrix}$, $\begin{bmatrix}
+0 \\
+1
+\end{bmatrix}$
+
+Mengalikan masing-masing dengan $A$ menghasilkan vektor
+
+$\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}$, $\begin{bmatrix}
+1 \\
+2
+\end{bmatrix}$, $\begin{bmatrix}
+5 \\
+5
+\end{bmatrix}$, $\begin{bmatrix}
+4 \\
+3
+\end{bmatrix}$
+
+masing-masing.
+(Petunjuk : salah satu cara menggunakan kalkulator untuk melakukan ini dengan cepat adalah membuat matriks 2 x 4 yang kolomnya masing-masing adalah vektor ini. Dalam hal ini. buat matriks
+
+$B = \begin{bmatrix}
+0&1&1&0 \\
+0&0&1&1
+\end{bmatrix}$
+
+Kemudian kalikan $B$ dengan $A$ dan baca vektor yang ditansformasikan dari kolom masing-masing:
+
+$AB = \begin{bmatrix}
+0&1&5&4 \\
+0&2&5&3
+\end{bmatrix}$
+
+Ini menghemat waktu, terutama jika Anda melakukan prosedur serupa untuk beberapa matriks $A$. Tentu saja kita dapat menghemat lebih banyak waktu dengan melewatkan kolom pertama; karena ini adalah kolom nol)
+
 * **Jenis-Jenis Transformasi Matriks**
 1. Horizontal Stretch $\begin{bmatrix}
 k&0 \\
