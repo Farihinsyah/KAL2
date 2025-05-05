@@ -383,16 +383,28 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pembuktian Transformasi Linier</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-additivitas-penjumlahan-vektor"><strong>1. Sifat Additivitas (Penjumlahan Vektor)</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-homogenitas-perkalian-skalar"><strong>2. Sifat Homogenitas (Perkalian Skalar)</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><strong>Kesimpulan</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-additivitas">1. Pembuktian Additivitas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-penjumlahan-vektor">Langkah 1: Hitung penjumlahan vektor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-sisi-kiri-dari-sifat-additivitas">Langkah 2: Hitung sisi kiri dari sifat additivitas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-hitung-sisi-kanan">Langkah 3: Hitung sisi kanan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-additivitas">Kesimpulan Additivitas:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-homogenitas">2. Pembuktian Homogenitas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-perkalian-skalar">Langkah 1: Hitung perkalian skalar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-sisi-kiri">Langkah 2: Hitung sisi kiri</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Langkah 3: Hitung sisi kanan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-homogenitas">Kesimpulan Homogenitas:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-akhir">Kesimpulan Akhir:</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-transformasi-refleksi-dengan-matriks-dan-titik">Contoh Transformasi Refleksi (Dengan Matriks dan Titik)</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-x">1. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(x\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">2. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(y\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-garis-y-x">3. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = x\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-titik-asal-origin">5. Refleksi terhadap titik asal (origin)</a></li>
 </ul>
 </li>
@@ -413,100 +425,119 @@ document.write(`
 <p>Diberikan transformasi:</p>
 <div class="math notranslate nohighlight">
 \[
-T(v_1, v_2) = (v_1 + v_2, v_1)
+T(v_1, v_2) = (v_1 + v_2,\ v_1)
 \]</div>
-<p>Kita ingin membuktikan bahwa <span class="math notranslate nohighlight">\(T\)</span> adalah transformasi linier. Untuk itu, kita harus menunjukkan bahwa <span class="math notranslate nohighlight">\(T\)</span> memenuhi dua sifat berikut untuk semua vektor <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in \mathbb{R}^2\)</span> dan semua skalar <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span>:</p>
+<p>Kita ingin membuktikan bahwa <span class="math notranslate nohighlight">\(T\)</span> adalah <em>transformasi linier</em>, yaitu memenuhi dua sifat:</p>
+<ol class="arabic simple">
+<li><p><em>Additivitas</em>:<br />
+<span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span></p></li>
+<li><p><em>Homogenitas (Perkalian skalar)</em>:<br />
+<span class="math notranslate nohighlight">\(T(c\mathbf{u}) = cT(\mathbf{u})\)</span></p></li>
+</ol>
 <hr class="docutils" />
-<section id="sifat-additivitas-penjumlahan-vektor">
-<h2><strong>1. Sifat Additivitas (Penjumlahan Vektor)</strong><a class="headerlink" href="#sifat-additivitas-penjumlahan-vektor" title="Link to this heading">#</a></h2>
-<p>Syarat:</p>
-<div class="math notranslate nohighlight">
-\[
-T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
-\]</div>
-<p>Misalkan:</p>
+<section id="pembuktian-additivitas">
+<h2>1. Pembuktian Additivitas<a class="headerlink" href="#pembuktian-additivitas" title="Link to this heading">#</a></h2>
+<p>Misalkan dua vektor di <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 \mathbf{u} = (u_1, u_2), \quad \mathbf{v} = (v_1, v_2)
 \]</div>
-<p>Maka:</p>
+<section id="langkah-1-hitung-penjumlahan-vektor">
+<h3>Langkah 1: Hitung penjumlahan vektor<a class="headerlink" href="#langkah-1-hitung-penjumlahan-vektor" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[
-\mathbf{u} + \mathbf{v} = (u_1 + v_1, u_2 + v_2)
+\mathbf{u} + \mathbf{v} = (u_1 + v_1,\ u_2 + v_2)
 \]</div>
-<p>Hitung sisi kiri:</p>
+</section>
+<section id="langkah-2-hitung-sisi-kiri-dari-sifat-additivitas">
+<h3>Langkah 2: Hitung sisi kiri dari sifat additivitas<a class="headerlink" href="#langkah-2-hitung-sisi-kiri-dari-sifat-additivitas" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[
-T(\mathbf{u} + \mathbf{v}) = T(u_1 + v_1, u_2 + v_2)
-= \left((u_1 + v_1) + (u_2 + v_2),\ u_1 + v_1\right)
-= \left(u_1 + u_2 + v_1 + v_2,\ u_1 + v_1\right)
+T(\mathbf{u} + \mathbf{v}) = T(u_1 + v_1,\ u_2 + v_2)
 \]</div>
-<p>Hitung sisi kanan:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(T(\mathbf{u}) = (u_1 + u_2, u_1)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(T(\mathbf{v}) = (v_1 + v_2, v_1)\)</span></p></li>
-</ul>
-<p>Maka:</p>
-<div class="math notranslate nohighlight">
-\[
-T(\mathbf{u}) + T(\mathbf{v}) 
-= (u_1 + u_2 + v_1 + v_2,\ u_1 + v_1)
-\]</div>
+<p>Definisi <span class="math notranslate nohighlight">\(T\)</span> mengatakan bahwa komponen pertama adalah penjumlahan dari dua komponen vektor input, dan komponen kedua adalah komponen pertama dari input itu sendiri. Maka:</p>
+<p>\begin{align*}
+T(\mathbf{u} + \mathbf{v})
+&amp;= ((u_1 + v_1) + (u_2 + v_2),\ u_1 + v_1) \
+&amp;= (u_1 + u_2 + v_1 + v_2,\ u_1 + v_1)
+\end{align*}</p>
+</section>
+<section id="langkah-3-hitung-sisi-kanan">
+<h3>Langkah 3: Hitung sisi kanan<a class="headerlink" href="#langkah-3-hitung-sisi-kanan" title="Link to this heading">#</a></h3>
+<p>Pertama, kita hitung:</p>
+<p>\begin{align*}
+T(\mathbf{u}) &amp;= (u_1 + u_2,\ u_1) \
+T(\mathbf{v}) &amp;= (v_1 + v_2,\ v_1)
+\end{align*}</p>
+<p>Kemudian jumlahkan kedua hasilnya:</p>
+<p>\begin{align*}
+T(\mathbf{u}) + T(\mathbf{v})
+&amp;= (u_1 + u_2 + v_1 + v_2,\ u_1 + v_1)
+\end{align*}</p>
+</section>
+<section id="kesimpulan-additivitas">
+<h3>Kesimpulan Additivitas:<a class="headerlink" href="#kesimpulan-additivitas" title="Link to this heading">#</a></h3>
 <p>Karena:</p>
 <div class="math notranslate nohighlight">
 \[
 T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
 \]</div>
-<p>maka sifat <strong>additivitas terpenuhi</strong>.</p>
+<p>maka <em>sifat additivitas terpenuhi</em>.</p>
+</section>
 </section>
 <hr class="docutils" />
-<section id="sifat-homogenitas-perkalian-skalar">
-<h2><strong>2. Sifat Homogenitas (Perkalian Skalar)</strong><a class="headerlink" href="#sifat-homogenitas-perkalian-skalar" title="Link to this heading">#</a></h2>
-<p>Syarat:</p>
+<section id="pembuktian-homogenitas">
+<h2>2. Pembuktian Homogenitas<a class="headerlink" href="#pembuktian-homogenitas" title="Link to this heading">#</a></h2>
+<p>Misalkan <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)\)</span> dan <span class="math notranslate nohighlight">\(c\)</span> adalah sembarang skalar di <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+<section id="langkah-1-hitung-perkalian-skalar">
+<h3>Langkah 1: Hitung perkalian skalar<a class="headerlink" href="#langkah-1-hitung-perkalian-skalar" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[
-T(c\mathbf{u}) = cT(\mathbf{u})
+c \cdot \mathbf{u} = (cu_1,\ cu_2)
 \]</div>
-<p>Misalkan <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)\)</span> dan <span class="math notranslate nohighlight">\(c\)</span> adalah skalar.</p>
-<p>Hitung sisi kiri:</p>
+</section>
+<section id="langkah-2-hitung-sisi-kiri">
+<h3>Langkah 2: Hitung sisi kiri<a class="headerlink" href="#langkah-2-hitung-sisi-kiri" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[
-c\mathbf{u} = (cu_1, cu_2)
+T(c\mathbf{u}) = T(cu_1,\ cu_2)
 \]</div>
-<div class="math notranslate nohighlight">
-\[
-T(c\mathbf{u}) = T(cu_1, cu_2)
-= (cu_1 + cu_2,\ cu_1)
-= c(u_1 + u_2,\ u_1)
-\]</div>
-<p>Hitung sisi kanan:</p>
-<div class="math notranslate nohighlight">
-\[
-T(\mathbf{u}) = (u_1 + u_2,\ u_1)
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-cT(\mathbf{u}) = c(u_1 + u_2,\ u_1) = (cu_1 + cu_2,\ cu_1)
-\]</div>
+<p>Menggunakan definisi <span class="math notranslate nohighlight">\(T\)</span>:</p>
+<p>\begin{align*}
+T(c\mathbf{u})
+&amp;= (cu_1 + cu_2,\ cu_1) \
+&amp;= c(u_1 + u_2,\ u_1)
+\end{align*}</p>
+</section>
+<section id="id1">
+<h3>Langkah 3: Hitung sisi kanan<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>\begin{align*}
+T(\mathbf{u}) &amp;= (u_1 + u_2,\ u_1) \
+c \cdot T(\mathbf{u}) &amp;= c(u_1 + u_2,\ u_1) = (cu_1 + cu_2,\ cu_1)
+\end{align*}</p>
+</section>
+<section id="kesimpulan-homogenitas">
+<h3>Kesimpulan Homogenitas:<a class="headerlink" href="#kesimpulan-homogenitas" title="Link to this heading">#</a></h3>
 <p>Karena:</p>
 <div class="math notranslate nohighlight">
 \[
 T(c\mathbf{u}) = cT(\mathbf{u})
 \]</div>
-<p>maka sifat <strong>homogenitas terpenuhi</strong>.</p>
+<p>maka <em>sifat homogenitas terpenuhi</em>.</p>
+</section>
 </section>
 <hr class="docutils" />
-<section id="kesimpulan">
-<h2><strong>Kesimpulan</strong><a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
-<p>Karena transformasi <span class="math notranslate nohighlight">\(T\)</span> memenuhi kedua sifat:</p>
+<section id="kesimpulan-akhir">
+<h2>Kesimpulan Akhir:<a class="headerlink" href="#kesimpulan-akhir" title="Link to this heading">#</a></h2>
+<p>Karena transformasi <span class="math notranslate nohighlight">\(T\)</span> memenuhi:</p>
 <ul class="simple">
-<li><p>Penjumlahan vektor: <span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span></p></li>
-<li><p>Perkalian skalar: <span class="math notranslate nohighlight">\(T(c\mathbf{u}) = cT(\mathbf{u})\)</span></p></li>
+<li><p><em>Additivitas</em>: <span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span></p></li>
+<li><p><em>Homogenitas</em>: <span class="math notranslate nohighlight">\(T(c\mathbf{u}) = cT(\mathbf{u})\)</span></p></li>
 </ul>
-<p>maka kita simpulkan bahwa:</p>
+<p>maka:</p>
 <div class="math notranslate nohighlight">
 \[
-\boxed{T(v_1, v_2) = (v_1 + v_2, v_1) \text{ adalah transformasi linier}}
+\boxed{T(v_1, v_2) = (v_1 + v_2,\ v_1) \text{ adalah transformasi linier}}
 \]</div>
 <hr class="docutils" />
 <hr class="docutils" />
@@ -528,7 +559,6 @@ T(c\mathbf{u}) = cT(\mathbf{u})
 <li><p><span class="math notranslate nohighlight">\(A(2, 3) \rightarrow A'(2, -3)\)</span></p></li>
 </ul>
 <iframe src="https://www.geogebra.org/calculator/csfvpra4" width="600" height="400" style="border:0;"></iframe>
-- $B(-1, -4) \rightarrow B'(-1, 4)$
 </section>
 <hr class="docutils" />
 <section id="refleksi-terhadap-sumbu-y">
@@ -540,9 +570,9 @@ T(c\mathbf{u}) = cT(\mathbf{u})
 \end{split}\]</div>
 <p>Contoh titik:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(C(3, 2) \rightarrow C'(-3, 2)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(D(-2, -1) \rightarrow D'(2, -1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A(3, 2) \rightarrow A'(-3, 2)\)</span></p></li>
 </ul>
+<iframe src="https://www.geogebra.org/calculator/fsn5nrva" width="600" height="400" style="border:0;"></iframe>
 </section>
 <hr class="docutils" />
 <section id="refleksi-terhadap-garis-y-x">
@@ -554,13 +584,13 @@ T(c\mathbf{u}) = cT(\mathbf{u})
 \end{split}\]</div>
 <p>Contoh titik:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(E(1, 4) \rightarrow E'(4, 1)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(F(-3, 2) \rightarrow F'(2, -3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A(1, 4) \rightarrow A'(4, 1)\)</span></p></li>
 </ul>
+<iframe src="https://www.geogebra.org/calculator/qrbyjpfu" width="600" height="400" style="border:0;"></iframe>
 </section>
 <hr class="docutils" />
-<section id="id1">
-<h2>4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h2>4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>Matriks transformasi:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -568,9 +598,9 @@ T(c\mathbf{u}) = cT(\mathbf{u})
 \end{split}\]</div>
 <p>Contoh titik:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(G(2, 5) \rightarrow G'(-5, -2)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(H(-1, -4) \rightarrow H'(4, 1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A(2, 5) \rightarrow A'(-5, -2)\)</span></p></li>
 </ul>
+<iframe src="https://www.geogebra.org/calculator/s7cmjmew" width="600" height="400" style="border:0;"></iframe>
 </section>
 <hr class="docutils" />
 <section id="refleksi-terhadap-titik-asal-origin">
@@ -582,9 +612,9 @@ T(c\mathbf{u}) = cT(\mathbf{u})
 \end{split}\]</div>
 <p>Contoh titik:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(I(3, -2) \rightarrow I'(-3, 2)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(J(-5, 1) \rightarrow J'(5, -1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A(3, -2) \rightarrow A'(-3, 2)\)</span></p></li>
 </ul>
+<iframe src="https://www.geogebra.org/calculator/qyg5yjf9" width="600" height="400" style="border:0;"></iframe>
 </section>
 </section>
 
@@ -644,16 +674,28 @@ T(c\mathbf{u}) = cT(\mathbf{u})
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pembuktian Transformasi Linier</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-additivitas-penjumlahan-vektor"><strong>1. Sifat Additivitas (Penjumlahan Vektor)</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-homogenitas-perkalian-skalar"><strong>2. Sifat Homogenitas (Perkalian Skalar)</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><strong>Kesimpulan</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-additivitas">1. Pembuktian Additivitas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-penjumlahan-vektor">Langkah 1: Hitung penjumlahan vektor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-sisi-kiri-dari-sifat-additivitas">Langkah 2: Hitung sisi kiri dari sifat additivitas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-hitung-sisi-kanan">Langkah 3: Hitung sisi kanan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-additivitas">Kesimpulan Additivitas:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-homogenitas">2. Pembuktian Homogenitas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-perkalian-skalar">Langkah 1: Hitung perkalian skalar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-sisi-kiri">Langkah 2: Hitung sisi kiri</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Langkah 3: Hitung sisi kanan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-homogenitas">Kesimpulan Homogenitas:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-akhir">Kesimpulan Akhir:</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-transformasi-refleksi-dengan-matriks-dan-titik">Contoh Transformasi Refleksi (Dengan Matriks dan Titik)</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-x">1. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(x\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">2. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(y\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-garis-y-x">3. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = x\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-titik-asal-origin">5. Refleksi terhadap titik asal (origin)</a></li>
 </ul>
 </li>

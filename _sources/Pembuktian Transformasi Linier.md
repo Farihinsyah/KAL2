@@ -8,52 +8,63 @@ title: Pembuktian Transformasi Linier
 Diberikan transformasi:
 
 $$
-T(v_1, v_2) = (v_1 + v_2, v_1)
+T(v_1, v_2) = (v_1 + v_2,\ v_1)
 $$
 
-Kita ingin membuktikan bahwa $T$ adalah transformasi linier. Untuk itu, kita harus menunjukkan bahwa $T$ memenuhi dua sifat berikut untuk semua vektor $\mathbf{u}, \mathbf{v} \in \mathbb{R}^2$ dan semua skalar $c \in \mathbb{R}$:
+Kita ingin membuktikan bahwa $T$ adalah *transformasi linier*, yaitu memenuhi dua sifat:
+
+1. *Additivitas*:  
+   $T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})$
+
+2. *Homogenitas (Perkalian skalar)*:  
+   $T(c\mathbf{u}) = cT(\mathbf{u})$
 
 ---
 
-### **1. Sifat Additivitas (Penjumlahan Vektor)**
+### 1. Pembuktian Additivitas
 
-Syarat:
-
-$$
-T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
-$$
-
-Misalkan:
+Misalkan dua vektor di $\mathbb{R}^2$:
 
 $$
 \mathbf{u} = (u_1, u_2), \quad \mathbf{v} = (v_1, v_2)
 $$
 
-Maka:
-
+#### Langkah 1: Hitung penjumlahan vektor
 $$
-\mathbf{u} + \mathbf{v} = (u_1 + v_1, u_2 + v_2)
-$$
-
-Hitung sisi kiri:
-
-$$
-T(\mathbf{u} + \mathbf{v}) = T(u_1 + v_1, u_2 + v_2)
-= \left((u_1 + v_1) + (u_2 + v_2),\ u_1 + v_1\right)
-= \left(u_1 + u_2 + v_1 + v_2,\ u_1 + v_1\right)
+\mathbf{u} + \mathbf{v} = (u_1 + v_1,\ u_2 + v_2)
 $$
 
-Hitung sisi kanan:
-
-- $T(\mathbf{u}) = (u_1 + u_2, u_1)$  
-- $T(\mathbf{v}) = (v_1 + v_2, v_1)$
-
-Maka:
+#### Langkah 2: Hitung sisi kiri dari sifat additivitas
 
 $$
+T(\mathbf{u} + \mathbf{v}) = T(u_1 + v_1,\ u_2 + v_2)
+$$
+
+Definisi $T$ mengatakan bahwa komponen pertama adalah penjumlahan dari dua komponen vektor input, dan komponen kedua adalah komponen pertama dari input itu sendiri. Maka:
+
+\begin{align*}
+T(\mathbf{u} + \mathbf{v}) 
+&= ((u_1 + v_1) + (u_2 + v_2),\ u_1 + v_1) \\
+&= (u_1 + u_2 + v_1 + v_2,\ u_1 + v_1)
+\end{align*}
+
+#### Langkah 3: Hitung sisi kanan
+
+Pertama, kita hitung:
+
+\begin{align*}
+T(\mathbf{u}) &= (u_1 + u_2,\ u_1) \\
+T(\mathbf{v}) &= (v_1 + v_2,\ v_1)
+\end{align*}
+
+Kemudian jumlahkan kedua hasilnya:
+
+\begin{align*}
 T(\mathbf{u}) + T(\mathbf{v}) 
-= (u_1 + u_2 + v_1 + v_2,\ u_1 + v_1)
-$$
+&= (u_1 + u_2 + v_1 + v_2,\ u_1 + v_1)
+\end{align*}
+
+#### Kesimpulan Additivitas:
 
 Karena:
 
@@ -61,41 +72,42 @@ $$
 T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
 $$
 
-maka sifat **additivitas terpenuhi**.
+maka *sifat additivitas terpenuhi*.
 
 ---
 
-### **2. Sifat Homogenitas (Perkalian Skalar)**
+### 2. Pembuktian Homogenitas
 
-Syarat:
+Misalkan $\mathbf{u} = (u_1, u_2)$ dan $c$ adalah sembarang skalar di $\mathbb{R}$.
 
-$$
-T(c\mathbf{u}) = cT(\mathbf{u})
-$$
-
-Misalkan $\mathbf{u} = (u_1, u_2)$ dan $c$ adalah skalar.
-
-Hitung sisi kiri:
+#### Langkah 1: Hitung perkalian skalar
 
 $$
-c\mathbf{u} = (cu_1, cu_2)
+c \cdot \mathbf{u} = (cu_1,\ cu_2)
 $$
 
-$$
-T(c\mathbf{u}) = T(cu_1, cu_2)
-= (cu_1 + cu_2,\ cu_1)
-= c(u_1 + u_2,\ u_1)
-$$
-
-Hitung sisi kanan:
+#### Langkah 2: Hitung sisi kiri
 
 $$
-T(\mathbf{u}) = (u_1 + u_2,\ u_1)
+T(c\mathbf{u}) = T(cu_1,\ cu_2)
 $$
 
-$$
-cT(\mathbf{u}) = c(u_1 + u_2,\ u_1) = (cu_1 + cu_2,\ cu_1)
-$$
+Menggunakan definisi $T$:
+
+\begin{align*}
+T(c\mathbf{u}) 
+&= (cu_1 + cu_2,\ cu_1) \\
+&= c(u_1 + u_2,\ u_1)
+\end{align*}
+
+#### Langkah 3: Hitung sisi kanan
+
+\begin{align*}
+T(\mathbf{u}) &= (u_1 + u_2,\ u_1) \\
+c \cdot T(\mathbf{u}) &= c(u_1 + u_2,\ u_1) = (cu_1 + cu_2,\ cu_1)
+\end{align*}
+
+#### Kesimpulan Homogenitas:
 
 Karena:
 
@@ -103,21 +115,21 @@ $$
 T(c\mathbf{u}) = cT(\mathbf{u})
 $$
 
-maka sifat **homogenitas terpenuhi**.
+maka *sifat homogenitas terpenuhi*.
 
 ---
 
-### **Kesimpulan**
+### Kesimpulan Akhir:
 
-Karena transformasi $T$ memenuhi kedua sifat:
+Karena transformasi $T$ memenuhi:
 
-- Penjumlahan vektor: $T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})$
-- Perkalian skalar: $T(c\mathbf{u}) = cT(\mathbf{u})$
+- *Additivitas*: $T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})$
+- *Homogenitas*: $T(c\mathbf{u}) = cT(\mathbf{u})$
 
-maka kita simpulkan bahwa:
+maka:
 
 $$
-\boxed{T(v_1, v_2) = (v_1 + v_2, v_1) \text{ adalah transformasi linier}}
+\boxed{T(v_1, v_2) = (v_1 + v_2,\ v_1) \text{ adalah transformasi linier}}
 $$
 
 
@@ -147,7 +159,7 @@ Contoh titik:
 
 - $A(2, 3) \rightarrow A'(2, -3)$  
 <iframe src="https://www.geogebra.org/calculator/csfvpra4" width="600" height="400" style="border:0;"></iframe>
-- $B(-1, -4) \rightarrow B'(-1, 4)$
+
 
 ---
 
@@ -161,8 +173,8 @@ $$
 
 Contoh titik:
 
-- $C(3, 2) \rightarrow C'(-3, 2)$  
-- $D(-2, -1) \rightarrow D'(2, -1)$
+- $A(3, 2) \rightarrow A'(-3, 2)$  
+<iframe src="https://www.geogebra.org/calculator/fsn5nrva" width="600" height="400" style="border:0;"></iframe>
 
 ---
 
@@ -176,8 +188,8 @@ $$
 
 Contoh titik:
 
-- $E(1, 4) \rightarrow E'(4, 1)$  
-- $F(-3, 2) \rightarrow F'(2, -3)$
+- $A(1, 4) \rightarrow A'(4, 1)$  
+<iframe src="https://www.geogebra.org/calculator/qrbyjpfu" width="600" height="400" style="border:0;"></iframe>
 
 ---
 
@@ -191,8 +203,8 @@ $$
 
 Contoh titik:
 
-- $G(2, 5) \rightarrow G'(-5, -2)$  
-- $H(-1, -4) \rightarrow H'(4, 1)$
+- $A(2, 5) \rightarrow A'(-5, -2)$  
+<iframe src="https://www.geogebra.org/calculator/s7cmjmew" width="600" height="400" style="border:0;"></iframe>
 
 ---
 
@@ -206,5 +218,5 @@ $$
 
 Contoh titik:
 
-- $I(3, -2) \rightarrow I'(-3, 2)$  
-- $J(-5, 1) \rightarrow J'(5, -1)$
+- $A(3, -2) \rightarrow A'(-3, 2)$  
+<iframe src="https://www.geogebra.org/calculator/qyg5yjf9" width="600" height="400" style="border:0;"></iframe>
