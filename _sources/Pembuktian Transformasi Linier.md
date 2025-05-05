@@ -158,6 +158,7 @@ $$
 Contoh titik:
 
 - $A(2, 3) \rightarrow A'(2, -3)$  
+- $B(-1, -4) \rightarrow B'(-1, 4)$
 <iframe src="https://www.geogebra.org/calculator/csfvpra4" width="600" height="400" style="border:0;"></iframe>
 
 
@@ -174,6 +175,7 @@ $$
 Contoh titik:
 
 - $A(3, 2) \rightarrow A'(-3, 2)$  
+- $B(-2, -1) \rightarrow B'(2, -1)$
 <iframe src="https://www.geogebra.org/calculator/fsn5nrva" width="600" height="400" style="border:0;"></iframe>
 
 ---
@@ -189,6 +191,7 @@ $$
 Contoh titik:
 
 - $A(1, 4) \rightarrow A'(4, 1)$  
+- $B(-3, 2) \rightarrow B'(2, -3)$
 <iframe src="https://www.geogebra.org/calculator/qrbyjpfu" width="600" height="400" style="border:0;"></iframe>
 
 ---
@@ -204,6 +207,7 @@ $$
 Contoh titik:
 
 - $A(2, 5) \rightarrow A'(-5, -2)$  
+- $B(-1, -4) \rightarrow B'(4, 1)$
 <iframe src="https://www.geogebra.org/calculator/s7cmjmew" width="600" height="400" style="border:0;"></iframe>
 
 ---
@@ -219,4 +223,5 @@ $$
 Contoh titik:
 
 - $A(3, -2) \rightarrow A'(-3, 2)$  
+- $B(-5, 1) \rightarrow B'(5, -1)$
 <iframe src="https://www.geogebra.org/calculator/qyg5yjf9" width="600" height="400" style="border:0;"></iframe>
