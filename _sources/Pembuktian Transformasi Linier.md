@@ -146,6 +146,7 @@ $$
 Contoh titik:
 
 - $A(2, 3) \rightarrow A'(2, -3)$  
+<iframe src="https://www.geogebra.org/calculator/csfvpra4" width="600" height="400" style="border:0;"></iframe>
 - $B(-1, -4) \rightarrow B'(-1, 4)$
 
 ---
