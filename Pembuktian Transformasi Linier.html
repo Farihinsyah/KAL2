@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to Komputasi Aljabar Linier &#8212; My sample book</title>
+    <title>Pembuktian Transformasi Linier &#8212; My sample book</title>
   
   
   
@@ -59,10 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Pembuktian Transformasi Linier';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Penyelesaian Sistem Persamaan" href="Penyelesaian%20Sistem%20Persamaan.html" />
+    <link rel="prev" title="Bab 5 Transformasi Matriks" href="Transformasi%20Matriks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,18 +174,18 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to Komputasi Aljabar Linier
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20Sistem%20Persamaan.html">Penyelesaian Sistem Persamaan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Menghitung%20Invers%20Matrik.html">Menghitung Invers Matrik</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Menghitung%20Invers%20Matrik%205x5.html">Menghitung Invers Matrik 5x5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Transformasi%20Matriks.html">Bab 5 Transformasi Matriks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Pembuktian%20Transformasi%20Linier.html">Pembuktian Transformasi Linier</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pembuktian Transformasi Linier</a></li>
 
 </ul>
 
@@ -260,7 +258,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPembuktian Transformasi Linier.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -290,7 +288,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Pembuktian Transformasi Linier.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -361,7 +359,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -372,11 +372,33 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to Komputasi Aljabar Linier</h1>
+    <h1>Pembuktian Transformasi Linier</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pembuktian Transformasi Linier</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-additivitas-penjumlahan-vektor"><strong>1. Sifat Additivitas (Penjumlahan Vektor)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-homogenitas-perkalian-skalar"><strong>2. Sifat Homogenitas (Perkalian Skalar)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><strong>Kesimpulan</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-transformasi-refleksi-dengan-matriks-dan-titik">Contoh Transformasi Refleksi (Dengan Matriks dan Titik)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-x">1. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">2. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(y\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-garis-y-x">3. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-titik-asal-origin">5. Refleksi terhadap titik asal (origin)</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -386,27 +408,183 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-komputasi-aljabar-linier">
-<h1>Welcome to Komputasi Aljabar Linier<a class="headerlink" href="#welcome-to-komputasi-aljabar-linier" title="Link to this heading">#</a></h1>
-<p>Komputasi aljabar linier adalah cabang dari komputasi numerik yang berfokus pada pemecahan masalah-masalah matematika yang melibatkan sistem persamaan linear, matriks, dan vektor. Ini mencakup operasi seperti perkalian matriks, dekomposisi matriks, pencarian nilai eigen, dan pemecahan sistem persamaan linear.</p>
-<p>Di dunia komputasi, aljabar linier digunakan secara luas dalam berbagai aplikasi, seperti:</p>
-<ol class="arabic simple">
-<li><p>Grafika komputer: Transformasi gambar 2D dan 3D.</p></li>
-<li><p>Machine learning: Operasi pada dataset besar yang direpresentasikan sebagai matriks.</p></li>
-<li><p>Pemrosesan sinyal: Analisis suara dan gambar.</p></li>
-<li><p>Simulasi ilmiah: Pemodelan fisika dan dinamika sistem.</p></li>
-</ol>
-<p>Sebagian besar bahasa pemrograman modern seperti Python, MATLAB, dan Julia memiliki pustaka khusus untuk komputasi aljabar linier, seperti NumPy di Python.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20Sistem%20Persamaan.html">Penyelesaian Sistem Persamaan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Menghitung%20Invers%20Matrik.html">Menghitung Invers Matrik</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Menghitung%20Invers%20Matrik%205x5.html">Menghitung Invers Matrik 5x5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Transformasi%20Matriks.html">Bab 5 Transformasi Matriks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Pembuktian%20Transformasi%20Linier.html">Pembuktian Transformasi Linier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Pembuktian%20Transformasi%20Linier.html#contoh-transformasi-refleksi-dengan-matriks-dan-titik">Contoh Transformasi Refleksi (Dengan Matriks dan Titik)</a></li>
+  <section id="pembuktian-transformasi-linier">
+<h1>Pembuktian Transformasi Linier<a class="headerlink" href="#pembuktian-transformasi-linier" title="Link to this heading">#</a></h1>
+<p>Diberikan transformasi:</p>
+<div class="math notranslate nohighlight">
+\[
+T(v_1, v_2) = (v_1 + v_2, v_1)
+\]</div>
+<p>Kita ingin membuktikan bahwa <span class="math notranslate nohighlight">\(T\)</span> adalah transformasi linier. Untuk itu, kita harus menunjukkan bahwa <span class="math notranslate nohighlight">\(T\)</span> memenuhi dua sifat berikut untuk semua vektor <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in \mathbb{R}^2\)</span> dan semua skalar <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span>:</p>
+<hr class="docutils" />
+<section id="sifat-additivitas-penjumlahan-vektor">
+<h2><strong>1. Sifat Additivitas (Penjumlahan Vektor)</strong><a class="headerlink" href="#sifat-additivitas-penjumlahan-vektor" title="Link to this heading">#</a></h2>
+<p>Syarat:</p>
+<div class="math notranslate nohighlight">
+\[
+T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
+\]</div>
+<p>Misalkan:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{u} = (u_1, u_2), \quad \mathbf{v} = (v_1, v_2)
+\]</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{u} + \mathbf{v} = (u_1 + v_1, u_2 + v_2)
+\]</div>
+<p>Hitung sisi kiri:</p>
+<div class="math notranslate nohighlight">
+\[
+T(\mathbf{u} + \mathbf{v}) = T(u_1 + v_1, u_2 + v_2)
+= \left((u_1 + v_1) + (u_2 + v_2),\ u_1 + v_1\right)
+= \left(u_1 + u_2 + v_1 + v_2,\ u_1 + v_1\right)
+\]</div>
+<p>Hitung sisi kanan:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T(\mathbf{u}) = (u_1 + u_2, u_1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T(\mathbf{v}) = (v_1 + v_2, v_1)\)</span></p></li>
 </ul>
-</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[
+T(\mathbf{u}) + T(\mathbf{v}) 
+= (u_1 + u_2 + v_1 + v_2,\ u_1 + v_1)
+\]</div>
+<p>Karena:</p>
+<div class="math notranslate nohighlight">
+\[
+T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
+\]</div>
+<p>maka sifat <strong>additivitas terpenuhi</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="sifat-homogenitas-perkalian-skalar">
+<h2><strong>2. Sifat Homogenitas (Perkalian Skalar)</strong><a class="headerlink" href="#sifat-homogenitas-perkalian-skalar" title="Link to this heading">#</a></h2>
+<p>Syarat:</p>
+<div class="math notranslate nohighlight">
+\[
+T(c\mathbf{u}) = cT(\mathbf{u})
+\]</div>
+<p>Misalkan <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)\)</span> dan <span class="math notranslate nohighlight">\(c\)</span> adalah skalar.</p>
+<p>Hitung sisi kiri:</p>
+<div class="math notranslate nohighlight">
+\[
+c\mathbf{u} = (cu_1, cu_2)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+T(c\mathbf{u}) = T(cu_1, cu_2)
+= (cu_1 + cu_2,\ cu_1)
+= c(u_1 + u_2,\ u_1)
+\]</div>
+<p>Hitung sisi kanan:</p>
+<div class="math notranslate nohighlight">
+\[
+T(\mathbf{u}) = (u_1 + u_2,\ u_1)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+cT(\mathbf{u}) = c(u_1 + u_2,\ u_1) = (cu_1 + cu_2,\ cu_1)
+\]</div>
+<p>Karena:</p>
+<div class="math notranslate nohighlight">
+\[
+T(c\mathbf{u}) = cT(\mathbf{u})
+\]</div>
+<p>maka sifat <strong>homogenitas terpenuhi</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="kesimpulan">
+<h2><strong>Kesimpulan</strong><a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
+<p>Karena transformasi <span class="math notranslate nohighlight">\(T\)</span> memenuhi kedua sifat:</p>
+<ul class="simple">
+<li><p>Penjumlahan vektor: <span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span></p></li>
+<li><p>Perkalian skalar: <span class="math notranslate nohighlight">\(T(c\mathbf{u}) = cT(\mathbf{u})\)</span></p></li>
+</ul>
+<p>maka kita simpulkan bahwa:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{T(v_1, v_2) = (v_1 + v_2, v_1) \text{ adalah transformasi linier}}
+\]</div>
+<hr class="docutils" />
+<hr class="docutils" />
+</section>
+</section>
+<section id="contoh-transformasi-refleksi-dengan-matriks-dan-titik">
+<h1>Contoh Transformasi Refleksi (Dengan Matriks dan Titik)<a class="headerlink" href="#contoh-transformasi-refleksi-dengan-matriks-dan-titik" title="Link to this heading">#</a></h1>
+<p>Berikut adalah contoh 2 titik untuk masing-masing jenis refleksi:</p>
+<hr class="docutils" />
+<section id="refleksi-terhadap-sumbu-x">
+<h2>1. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(x\)</span><a class="headerlink" href="#refleksi-terhadap-sumbu-x" title="Link to this heading">#</a></h2>
+<p>Matriks transformasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
+\end{split}\]</div>
+<p>Contoh titik:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A(2, 3) \rightarrow A'(2, -3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(B(-1, -4) \rightarrow B'(-1, 4)\)</span></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="refleksi-terhadap-sumbu-y">
+<h2>2. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(y\)</span><a class="headerlink" href="#refleksi-terhadap-sumbu-y" title="Link to this heading">#</a></h2>
+<p>Matriks transformasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Contoh titik:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C(3, 2) \rightarrow C'(-3, 2)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(D(-2, -1) \rightarrow D'(2, -1)\)</span></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="refleksi-terhadap-garis-y-x">
+<h2>3. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = x\)</span><a class="headerlink" href="#refleksi-terhadap-garis-y-x" title="Link to this heading">#</a></h2>
+<p>Matriks transformasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Contoh titik:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(E(1, 4) \rightarrow E'(4, 1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(F(-3, 2) \rightarrow F'(2, -3)\)</span></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h2>4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Matriks transformasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 0 &amp; -1 \\ -1 &amp; 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Contoh titik:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(G(2, 5) \rightarrow G'(-5, -2)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(H(-1, -4) \rightarrow H'(4, 1)\)</span></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="refleksi-terhadap-titik-asal-origin">
+<h2>5. Refleksi terhadap titik asal (origin)<a class="headerlink" href="#refleksi-terhadap-titik-asal-origin" title="Link to this heading">#</a></h2>
+<p>Matriks transformasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} -1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
+\end{split}\]</div>
+<p>Contoh titik:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(I(3, -2) \rightarrow I'(-3, 2)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(J(-5, 1) \rightarrow J'(5, -1)\)</span></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -439,14 +617,14 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="Penyelesaian%20Sistem%20Persamaan.html"
-       title="next page">
+    <a class="left-prev"
+       href="Transformasi%20Matriks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Penyelesaian Sistem Persamaan</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bab 5 Transformasi Matriks</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -454,6 +632,35 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pembuktian Transformasi Linier</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-additivitas-penjumlahan-vektor"><strong>1. Sifat Additivitas (Penjumlahan Vektor)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-homogenitas-perkalian-skalar"><strong>2. Sifat Homogenitas (Perkalian Skalar)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan"><strong>Kesimpulan</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-transformasi-refleksi-dengan-matriks-dan-titik">Contoh Transformasi Refleksi (Dengan Matriks dan Titik)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-x">1. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">2. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(y\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-garis-y-x">3. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-titik-asal-origin">5. Refleksi terhadap titik asal (origin)</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
