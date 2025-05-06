@@ -746,20 +746,36 @@ x_LT2 = B_trans[0,:]
 y_LT2 = B_trans[1,:]
 
 fig, ax = plt.subplots()
-ax.plot(x,y,'ro')
-ax.plot(x_LT2,y_LT2,'bo')
-ax.plot(x,y,'r',ls="--")
-ax.plot(x_LT2,y_LT2,'b')
-ax.axhline(y=2,color="black",ls=":",label="y=2")
-ax.axvline(x=0,color="k",ls=":")
-ax.axhline(y=0,color="k",ls=":")
+
+# Titik asal (merah)
+ax.plot(x, y, 'ro', label="Asal (Domain)")
+
+# Titik bayangan (biru)
+ax.plot(x_LT2, y_LT2, 'bo', label="Bayangan (Codomain)")
+
+# Garis putus-putus antara asal
+ax.plot(x, y, 'r', ls="--")
+
+# Garis refleksi biru
+ax.plot(x_LT2, y_LT2, 'b')
+
+# Garis refleksi y = 2
+ax.axhline(y=2, color="black", ls="--", label="y = 2")
+
+# Sumbu koordinat
+ax.axvline(x=0, color="k", ls=":")
+ax.axhline(y=0, color="k", ls=":")
+
 ax.grid(True)
 ax.axis([0,4,0,4])
 ax.set_aspect('equal')
-ax.set_title("Refleksi sumbu Y = 2")
+ax.set_title("Refleksi terhadap Sumbu Y = 2")
+
+# Menampilkan legenda
+ax.legend()
 ```
 
-![image](https://hackmd.io/_uploads/HkuxZePgge.png)
+![alt text](image.png)
 
 
 ---
@@ -833,21 +849,38 @@ x_LT2 = B_trans[0,:]
 y_LT2 = B_trans[1,:]
 
 fig, ax = plt.subplots()
-ax.plot(x,y,'ro')
-ax.plot(x_LT2,y_LT2,'bo')
-ax.plot(x,y,'r',ls="--")
-ax.plot(x_LT2,y_LT2,'b')
-ax.axvline(x=2,color="black",ls=":",label="x=2")
-ax.axvline(x=0,color="k",ls=":")
-ax.axhline(y=0,color="k",ls=":")
+
+# Titik asal (merah)
+ax.plot(x, y, 'ro', label="Asal (Domain)")
+
+# Titik bayangan (biru)
+ax.plot(x_LT2, y_LT2, 'bo', label="Bayangan (Codomain)")
+
+# Garis putus-putus antara asal
+ax.plot(x, y, 'r', ls="--")
+
+# Garis refleksi biru
+ax.plot(x_LT2, y_LT2, 'b')
+
+# Garis refleksi x = 2 (hitam putus-putus)
+ax.axvline(x=2, color="black", ls="--", label="x = 2")
+
+# Sumbu koordinat
+ax.axvline(x=0, color="k", ls=":")
+ax.axhline(y=0, color="k", ls=":")
+
 ax.grid(True)
 ax.axis([0,4,0,4])
 ax.set_aspect('equal')
-ax.set_title("Refleksi sumbu X = 2")
+ax.set_title("Refleksi terhadap Sumbu X = 2")
+
+# Menampilkan legenda
+ax.legend()
 ```
 
 
-![image](https://hackmd.io/_uploads/HJ_QWxveel.png)
+![alt text](image-1.png)
+
 
 ---
 
@@ -904,18 +937,34 @@ x_LT2 = B_trans[0,:]
 y_LT2 = B_trans[1,:]
 
 fig, ax = plt.subplots()
-ax.plot(x,y,'ro')
-ax.plot(x_LT2,y_LT2,'bo')
-ax.plot(x,y,'r',ls="--")
-ax.plot(x_LT2,y_LT2,'b')
-ax.plot([0,4],[0,4],'black',ls=":",label="y=x")
-ax.axvline(x=0,color="k",ls=":")
-ax.axhline(y=0,color="k",ls=":")
+
+# Titik asal (merah)
+ax.plot(x, y, 'ro', label="Asal (Domain)")
+
+# Titik bayangan (biru)
+ax.plot(x_LT2, y_LT2, 'bo', label="Bayangan (Codomain)")
+
+# Garis putus-putus dari titik asal
+ax.plot(x, y, 'r', ls="--")
+
+# Garis dari bayangan
+ax.plot(x_LT2, y_LT2, 'b')
+
+# Garis refleksi y = x (hitam putus-putus)
+ax.plot([0, 4], [0, 4], color="black", ls="--", label="y = x")
+
+# Sumbu koordinat
+ax.axvline(x=0, color="k", ls=":")
+ax.axhline(y=0, color="k", ls=":")
+
 ax.grid(True)
 ax.axis([0,4,0,4])
 ax.set_aspect('equal')
 ax.set_title("Refleksi terhadap garis y = x")
+
+# Menampilkan legenda
+ax.legend()
+
 ```
 
-
-![image](https://hackmd.io/_uploads/BkDEWePgxg.png)
+![alt text](image-2.png)
