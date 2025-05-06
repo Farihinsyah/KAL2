@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Penjelasan Refleksi Titik terhadap Garis ( y = 2 ) &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Refleksi Titik terhadap Garis';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Pembuktian Transformasi Linier" href="Pembuktian%20Transformasi%20Linier.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Komputasi Aljabar Linier
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20Sistem%20Persamaan.html">Penyelesaian Sistem Persamaan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Menghitung%20Invers%20Matrik.html">Menghitung Invers Matrik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Menghitung%20Invers%20Matrik%205x5.html">Menghitung Invers Matrik 5x5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Transformasi%20Matriks.html">Bab 5 Transformasi Matriks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pembuktian%20Transformasi%20Linier.html">Pembuktian Transformasi Linier</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penjelasan Refleksi Titik terhadap Garis ( y = 2 )</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FRefleksi Titik terhadap Garis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Refleksi Titik terhadap Garis.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Penjelasan Refleksi Titik terhadap Garis ( y = 2 )</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Penjelasan Refleksi Titik terhadap Garis ( y = 2 )</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-sumbu-x">Langkah 1: Matriks Refleksi terhadap Sumbu-X</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-y-2">Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( y = 2 )</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-menghitung-titik-refleksi">Langkah 3: Menghitung Titik Refleksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-visualisasi-grafik">Langkah 4: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grafik">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-refleksi-titik-terhadap-garis-x-2">Penjelasan Refleksi Titik terhadap Garis ( x = 2 )</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-sumbu-y">Langkah 1: Matriks Refleksi terhadap Sumbu-Y</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-x-2">Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( x = 2 )</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Langkah 3: Menghitung Titik Refleksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Langkah 4: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-refleksi-titik-terhadap-garis-y-x">Penjelasan Refleksi Titik terhadap Garis ( y = x )</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-garis-y-x">Langkah 1: Matriks Refleksi terhadap Garis ( y = x )</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-menghitung-titik-refleksi">Langkah 2: Menghitung Titik Refleksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-visualisasi-grafik">Langkah 3: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="penjelasan-refleksi-titik-terhadap-garis-y-2">
+<h1>Penjelasan Refleksi Titik terhadap Garis ( y = 2 )<a class="headerlink" href="#penjelasan-refleksi-titik-terhadap-garis-y-2" title="Link to this heading">#</a></h1>
+<p>Dalam transformasi geometri, refleksi titik terhadap suatu garis dapat dilakukan menggunakan matriks dan translasi. Pada kasus ini, kita akan merefleksikan titik terhadap garis horizontal ( y = 2 ). Berikut adalah penjelasan langkah-langkah yang diambil dalam proses refleksi tersebut.</p>
+<section id="langkah-1-matriks-refleksi-terhadap-sumbu-x">
+<h2>Langkah 1: Matriks Refleksi terhadap Sumbu-X<a class="headerlink" href="#langkah-1-matriks-refleksi-terhadap-sumbu-x" title="Link to this heading">#</a></h2>
+<p>Untuk refleksi terhadap garis horizontal ( y = 2 ), kita perlu menggunakan dua operasi dasar:</p>
+<ol class="arabic">
+<li><p><strong>Refleksi terhadap sumbu-X:</strong>
+Matriks refleksi terhadap sumbu-X membalikkan koordinat ( y ) dari titik yang diberikan. Matriks refleksi terhadap sumbu-X adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   B = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
+   \end{split}\]</div>
+<p>Matriks ini membalikkan koordinat ( y ), tetapi tidak mengubah ( x ).</p>
+</li>
+</ol>
+</section>
+<section id="langkah-2-translasi-untuk-menyesuaikan-dengan-garis-y-2">
+<h2>Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( y = 2 )<a class="headerlink" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-y-2" title="Link to this heading">#</a></h2>
+<p>Setelah refleksi terhadap sumbu-X, kita perlu melakukan <strong>translasi</strong> agar titik hasil refleksi berada pada posisi yang benar relatif terhadap garis ( y = 2 ). Garis ( y = 2 ) berada pada jarak 2 satuan di atas sumbu-X. Oleh karena itu, kita perlu menambahkan vektor translasi yang menggeser hasil refleksi ke posisi yang tepat.</p>
+<p>Vektor translasi yang digunakan adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+t = \begin{bmatrix} 0 \\ 4 \end{bmatrix}
+\end{split}\]</div>
+<p>Vektor ini menggeser titik hasil refleksi sebesar 4 satuan di atas sumbu-X untuk mencapai garis ( y = 2 ).</p>
+</section>
+<section id="langkah-3-menghitung-titik-refleksi">
+<h2>Langkah 3: Menghitung Titik Refleksi<a class="headerlink" href="#langkah-3-menghitung-titik-refleksi" title="Link to this heading">#</a></h2>
+<p>Titik asal yang akan direfleksikan adalah ( (x, y) = (1, 1) ). Proses refleksi dilakukan dengan matriks transformasi yang terdiri dari refleksi dan translasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = B \cdot \begin{bmatrix} x \\ y \end{bmatrix} + t
+\end{split}\]</div>
+<p>Substitusi koordinat ( (x, y) = (1, 1) ) ke dalam persamaan ini menghasilkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 1 \end{bmatrix} + \begin{bmatrix} 0 \\ 4 \end{bmatrix} = \begin{bmatrix} 1 \\ -1 \end{bmatrix} + \begin{bmatrix} 0 \\ 4 \end{bmatrix} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}
+\end{split}\]</div>
+<p>Dengan demikian, titik hasil refleksi adalah ( (1, 3) ).</p>
+</section>
+<section id="langkah-4-visualisasi-grafik">
+<h2>Langkah 4: Visualisasi Grafik<a class="headerlink" href="#langkah-4-visualisasi-grafik" title="Link to this heading">#</a></h2>
+<p>Untuk memvisualisasikan refleksi ini, kita menggambar titik asal dan titik hasil refleksi pada grafik. Titik asal diberi tanda merah (ro), dan titik hasil refleksi diberi tanda biru (bo). Garis ( y = 2 ) juga digambarkan sebagai garis hijau.</p>
+<section id="grafik">
+<h3>Grafik:<a class="headerlink" href="#grafik" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Titik asal:</strong> Titik ( (1, 1) ) digambarkan dengan tanda merah.</p></li>
+<li><p><strong>Titik hasil refleksi:</strong> Titik ( (1, 3) ) digambarkan dengan tanda biru.</p></li>
+<li><p><strong>Garis ( y = 2 ):</strong> Garis hitam sebagai garis refleksi.</p></li>
+<li><p><strong>Garis horizontal:</strong> Untuk menunjukkan sumbu X dan Y yang digunakan sebagai referensi.</p></li>
+</ol>
+<p>koordinats = np.array([[1], [1]])
+x = koordinats[0,:]
+y = koordinats[1,:]</p>
+<p>B = np.array([[1,0],[0,-1]])
+t = np.array([[0],[4]])
+B_trans = B &#64; koordinats + t</p>
+<p>x_LT2 = B_trans[0,:]
+y_LT2 = B_trans[1,:]</p>
+<p>fig, ax = plt.subplots()
+ax.plot(x,y,’ro’)
+ax.plot(x_LT2,y_LT2,’bo’)
+ax.plot(x,y,’r’,ls=”–“)
+ax.plot(x_LT2,y_LT2,’b’)
+ax.axhline(y=2,color=”black”,ls=”:”,label=”y=2”)
+ax.axvline(x=0,color=”k”,ls=”:”)
+ax.axhline(y=0,color=”k”,ls=”:”)
+ax.grid(True)
+ax.axis([0,4,0,4])
+ax.set_aspect(‘equal’)
+ax.set_title(“Refleksi sumbu Y = 2”)</p>
+<p><img alt="image" src="https://hackmd.io/_uploads/HkuxZePgge.png" /></p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="penjelasan-refleksi-titik-terhadap-garis-x-2">
+<h1>Penjelasan Refleksi Titik terhadap Garis ( x = 2 )<a class="headerlink" href="#penjelasan-refleksi-titik-terhadap-garis-x-2" title="Link to this heading">#</a></h1>
+<p>Dalam transformasi geometri, refleksi titik terhadap suatu garis dapat dilakukan dengan menggunakan matriks refleksi dan translasi. Pada kasus ini, kita akan merefleksikan titik terhadap garis vertikal ( x = 2 ). Berikut adalah penjelasan langkah-langkah yang diambil dalam proses refleksi tersebut.</p>
+<section id="langkah-1-matriks-refleksi-terhadap-sumbu-y">
+<h2>Langkah 1: Matriks Refleksi terhadap Sumbu-Y<a class="headerlink" href="#langkah-1-matriks-refleksi-terhadap-sumbu-y" title="Link to this heading">#</a></h2>
+<p>Untuk refleksi terhadap garis vertikal ( x = 2 ), kita perlu menggunakan dua operasi dasar:</p>
+<ol class="arabic">
+<li><p><strong>Refleksi terhadap sumbu-Y:</strong>
+Matriks refleksi terhadap sumbu-Y membalikkan koordinat ( x ) dari titik yang diberikan. Matriks refleksi terhadap sumbu-Y adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   B = \begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+   \end{split}\]</div>
+<p>Matriks ini membalikkan koordinat ( x ), tetapi tidak mengubah ( y ).</p>
+</li>
+</ol>
+</section>
+<section id="langkah-2-translasi-untuk-menyesuaikan-dengan-garis-x-2">
+<h2>Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( x = 2 )<a class="headerlink" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-x-2" title="Link to this heading">#</a></h2>
+<p>Setelah refleksi terhadap sumbu-Y, kita perlu melakukan <strong>translasi</strong> agar titik hasil refleksi berada pada posisi yang benar relatif terhadap garis ( x = 2 ). Garis ( x = 2 ) berada pada jarak 2 satuan di sebelah kanan sumbu-Y. Oleh karena itu, kita perlu menambahkan vektor translasi yang menggeser hasil refleksi ke posisi yang tepat.</p>
+<p>Vektor translasi yang digunakan adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+t = \begin{bmatrix} 4 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Vektor ini menggeser titik hasil refleksi sebesar 4 satuan ke kanan sumbu-Y untuk mencapai garis ( x = 2 ).</p>
+</section>
+<section id="id1">
+<h2>Langkah 3: Menghitung Titik Refleksi<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Titik asal yang akan direfleksikan adalah ( (x, y) = (1, 1) ). Proses refleksi dilakukan dengan matriks transformasi yang terdiri dari refleksi dan translasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = B \cdot \begin{bmatrix} x \\ y \end{bmatrix} + t
+\end{split}\]</div>
+<p>Substitusi koordinat ( (x, y) = (1, 1) ) ke dalam persamaan ini menghasilkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = \begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 1 \end{bmatrix} + \begin{bmatrix} 4 \\ 0 \end{bmatrix} = \begin{bmatrix} -1 \\ 1 \end{bmatrix} + \begin{bmatrix} 4 \\ 0 \end{bmatrix} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Dengan demikian, titik hasil refleksi adalah ( (3, 1) ).</p>
+</section>
+<section id="id2">
+<h2>Langkah 4: Visualisasi Grafik<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Untuk memvisualisasikan refleksi ini, kita menggambar titik asal dan titik hasil refleksi pada grafik. Titik asal diberi tanda merah (ro), dan titik hasil refleksi diberi tanda biru (bo). Garis ( x = 2 ) juga digambarkan sebagai garis hitam.</p>
+<section id="id3">
+<h3>Grafik:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Titik asal:</strong> Titik ( (1, 1) ) digambarkan dengan tanda merah.</p></li>
+<li><p><strong>Titik hasil refleksi:</strong> Titik ( (3, 1) ) digambarkan dengan tanda biru.</p></li>
+<li><p><strong>Garis ( x = 2 ):</strong> Garis hitam sebagai garis refleksi.</p></li>
+<li><p><strong>Garis sumbu X dan Y:</strong> Untuk menunjukkan sumbu referensi.</p></li>
+</ol>
+<p>koordinats = np.array([[1], [1]])
+x = koordinats[0,:]
+y = koordinats[1,:]</p>
+<p>B = np.array([[-1,0],[0,1]])
+t = np.array([[4],[0]])
+B_trans = B &#64; koordinats + t</p>
+<p>x_LT2 = B_trans[0,:]
+y_LT2 = B_trans[1,:]</p>
+<p>fig, ax = plt.subplots()
+ax.plot(x,y,’ro’)
+ax.plot(x_LT2,y_LT2,’bo’)
+ax.plot(x,y,’r’,ls=”–“)
+ax.plot(x_LT2,y_LT2,’b’)
+ax.axvline(x=2,color=”black”,ls=”:”,label=”x=2”)
+ax.axvline(x=0,color=”k”,ls=”:”)
+ax.axhline(y=0,color=”k”,ls=”:”)
+ax.grid(True)
+ax.axis([0,4,0,4])
+ax.set_aspect(‘equal’)
+ax.set_title(“Refleksi sumbu X = 2”)</p>
+<p><img alt="image" src="https://hackmd.io/_uploads/HJ_QWxveel.png" /></p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="penjelasan-refleksi-titik-terhadap-garis-y-x">
+<h1>Penjelasan Refleksi Titik terhadap Garis ( y = x )<a class="headerlink" href="#penjelasan-refleksi-titik-terhadap-garis-y-x" title="Link to this heading">#</a></h1>
+<p>Refleksi titik terhadap garis ( y = x ) adalah transformasi geometri di mana titik asal dipindahkan sehingga posisinya simetris terhadap garis tersebut. Untuk memahami proses ini, mari kita lihat langkah-langkah berikut.</p>
+<section id="langkah-1-matriks-refleksi-terhadap-garis-y-x">
+<h2>Langkah 1: Matriks Refleksi terhadap Garis ( y = x )<a class="headerlink" href="#langkah-1-matriks-refleksi-terhadap-garis-y-x" title="Link to this heading">#</a></h2>
+<p>Refleksi terhadap garis ( y = x ) dapat dilakukan dengan menggunakan matriks transformasi. Matriks refleksi untuk garis ( y = x ) dapat dinyatakan sebagai:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Matriks ini bertukar posisi komponen ( x ) dan ( y ) dari titik yang diberikan. Jadi, setelah diterapkan, koordinat titik ( (x, y) ) akan menjadi ( (y, x) ).</p>
+</section>
+<section id="langkah-2-menghitung-titik-refleksi">
+<h2>Langkah 2: Menghitung Titik Refleksi<a class="headerlink" href="#langkah-2-menghitung-titik-refleksi" title="Link to this heading">#</a></h2>
+<p>Titik asal yang akan direfleksikan adalah ( (x, y) = (1, 2) ). Proses refleksi dilakukan dengan mengalikan matriks refleksi ( B ) dengan vektor koordinat asal ( (x, y) ):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = B \cdot \begin{bmatrix} x \\ y \end{bmatrix}
+\end{split}\]</div>
+<p>Substitusi koordinat ( (x, y) = (1, 2) ) ke dalam persamaan ini menghasilkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 2 \end{bmatrix} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Dengan demikian, titik hasil refleksi adalah ( (2, 1) ).</p>
+</section>
+<section id="langkah-3-visualisasi-grafik">
+<h2>Langkah 3: Visualisasi Grafik<a class="headerlink" href="#langkah-3-visualisasi-grafik" title="Link to this heading">#</a></h2>
+<p>Untuk memvisualisasikan refleksi ini, kita menggambar titik asal dan titik hasil refleksi pada grafik. Titik asal diberi tanda merah (ro), dan titik hasil refleksi diberi tanda biru (bo). Garis ( y = x ) digambarkan sebagai garis hitam.</p>
+<section id="id4">
+<h3>Grafik:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Titik asal:</strong> Titik ( (1, 2) ) digambarkan dengan tanda merah.</p></li>
+<li><p><strong>Titik hasil refleksi:</strong> Titik ( (2, 1) ) digambarkan dengan tanda biru.</p></li>
+<li><p><strong>Garis ( y = x ):</strong> Garis hitam sebagai garis refleksi.</p></li>
+<li><p><strong>Garis sumbu X dan Y:</strong> Untuk menunjukkan sumbu referensi.</p></li>
+</ol>
+<p>koordinats = np.array([[1], [2]])
+x = koordinats[0,:]
+y = koordinats[1,:]</p>
+<p>B = np.array([[0,1],[1,0]])
+B_trans = B &#64; koordinats</p>
+<p>x_LT2 = B_trans[0,:]
+y_LT2 = B_trans[1,:]</p>
+<p>fig, ax = plt.subplots()
+ax.plot(x,y,’ro’)
+ax.plot(x_LT2,y_LT2,’bo’)
+ax.plot(x,y,’r’,ls=”–“)
+ax.plot(x_LT2,y_LT2,’b’)
+ax.plot([0,4],[0,4],’black’,ls=”:”,label=”y=x”)
+ax.axvline(x=0,color=”k”,ls=”:”)
+ax.axhline(y=0,color=”k”,ls=”:”)
+ax.grid(True)
+ax.axis([0,4,0,4])
+ax.set_aspect(‘equal’)
+ax.set_title(“Refleksi terhadap garis y = x”)</p>
+<p><img alt="image" src="https://hackmd.io/_uploads/BkDEWePgxg.png" /></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Pembuktian%20Transformasi%20Linier.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pembuktian Transformasi Linier</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Penjelasan Refleksi Titik terhadap Garis ( y = 2 )</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-sumbu-x">Langkah 1: Matriks Refleksi terhadap Sumbu-X</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-y-2">Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( y = 2 )</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-menghitung-titik-refleksi">Langkah 3: Menghitung Titik Refleksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-visualisasi-grafik">Langkah 4: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grafik">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-refleksi-titik-terhadap-garis-x-2">Penjelasan Refleksi Titik terhadap Garis ( x = 2 )</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-sumbu-y">Langkah 1: Matriks Refleksi terhadap Sumbu-Y</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-x-2">Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( x = 2 )</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Langkah 3: Menghitung Titik Refleksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Langkah 4: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-refleksi-titik-terhadap-garis-y-x">Penjelasan Refleksi Titik terhadap Garis ( y = x )</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-garis-y-x">Langkah 1: Matriks Refleksi terhadap Garis ( y = x )</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-menghitung-titik-refleksi">Langkah 2: Menghitung Titik Refleksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-visualisasi-grafik">Langkah 3: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
