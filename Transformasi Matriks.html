@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Bab 5 Transformasi Matriks &#8212; My sample book</title>
+    <title>Transformasi Matriks &#8212; My sample book</title>
   
   
   
@@ -184,7 +184,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20Sistem%20Persamaan.html">Penyelesaian Sistem Persamaan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Menghitung%20Invers%20Matrik.html">Menghitung Invers Matrik</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Menghitung%20Invers%20Matrik%205x5.html">Menghitung Invers Matrik 5x5</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bab 5 Transformasi Matriks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Transformasi Matriks</a></li>
 </ul>
 
     </div>
@@ -370,7 +370,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Bab 5 Transformasi Matriks</h1>
+    <h1>Transformasi Matriks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -381,6 +381,61 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengerjakan-halaman-239">Mengerjakan Halaman 239</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-transformasi-linier">Pembuktian Transformasi Linier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-additivitas">1. Pembuktian Additivitas</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-penjumlahan-vektor">Langkah 1: Hitung penjumlahan vektor</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-sisi-kiri-dari-sifat-additivitas">Langkah 2: Hitung sisi kiri dari sifat additivitas</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-hitung-sisi-kanan">Langkah 3: Hitung sisi kanan</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-additivitas">Kesimpulan Additivitas:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-homogenitas">2. Pembuktian Homogenitas</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-perkalian-skalar">Langkah 1: Hitung perkalian skalar</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-sisi-kiri">Langkah 2: Hitung sisi kiri</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Langkah 3: Hitung sisi kanan</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-homogenitas">Kesimpulan Homogenitas:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-akhir">Kesimpulan Akhir:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-transformasi-refleksi-dengan-matriks-dan-titik">Contoh Transformasi Refleksi (Dengan Matriks dan Titik)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-x">1. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(x\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">2. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(y\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-garis-y-x">3. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = x\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-titik-asal-origin">5. Refleksi terhadap titik asal (origin)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-refleksi-titik-terhadap-garis-y-2">Penjelasan Refleksi Titik terhadap Garis ( y = 2 )</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-sumbu-x">Langkah 1: Matriks Refleksi terhadap Sumbu-X</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-y-2">Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( y = 2 )</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-menghitung-titik-refleksi">Langkah 3: Menghitung Titik Refleksi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-visualisasi-grafik">Langkah 4: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grafik">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-refleksi-titik-terhadap-garis-x-2">Penjelasan Refleksi Titik terhadap Garis ( x = 2 )</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-sumbu-y">Langkah 1: Matriks Refleksi terhadap Sumbu-Y</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-x-2">Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( x = 2 )</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Langkah 3: Menghitung Titik Refleksi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Langkah 4: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-refleksi-titik-terhadap-garis-y-x">Penjelasan Refleksi Titik terhadap Garis ( y = x )</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-garis-y-x">Langkah 1: Matriks Refleksi terhadap Garis ( y = x )</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-menghitung-titik-refleksi">Langkah 2: Menghitung Titik Refleksi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-visualisasi-grafik">Langkah 3: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -392,8 +447,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="bab-5-transformasi-matriks">
-<h1>Bab 5 Transformasi Matriks<a class="headerlink" href="#bab-5-transformasi-matriks" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="transformasi-matriks">
+<h1>Transformasi Matriks<a class="headerlink" href="#transformasi-matriks" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p><strong>Pengertian Transformasi Matriks</strong>
 Transformasi matriks adalah fungsi yang mengubah satu vektor menjadi vektor lain melalui perkalian matriks
@@ -784,6 +839,441 @@ A
 1 &amp; -1 \\
 1 &amp; 1
 \end{bmatrix}\)</span></p>
+<hr class="docutils" />
+</section>
+<hr class="docutils" />
+<section id="pembuktian-transformasi-linier">
+<h2>Pembuktian Transformasi Linier<a class="headerlink" href="#pembuktian-transformasi-linier" title="Link to this heading">#</a></h2>
+<p>Diberikan transformasi:</p>
+<div class="math notranslate nohighlight">
+\[
+T(v_1, v_2) = (v_1 + v_2,\ v_1)
+\]</div>
+<p>Kita ingin membuktikan bahwa <span class="math notranslate nohighlight">\(T\)</span> adalah <em>transformasi linier</em>, yaitu memenuhi dua sifat:</p>
+<ol class="arabic simple">
+<li><p><em>Additivitas</em>:<br />
+<span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span></p></li>
+<li><p><em>Homogenitas (Perkalian skalar)</em>:<br />
+<span class="math notranslate nohighlight">\(T(c\mathbf{u}) = cT(\mathbf{u})\)</span></p></li>
+</ol>
+<hr class="docutils" />
+<section id="pembuktian-additivitas">
+<h3>1. Pembuktian Additivitas<a class="headerlink" href="#pembuktian-additivitas" title="Link to this heading">#</a></h3>
+<p>Misalkan dua vektor di <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{u} = (u_1, u_2), \quad \mathbf{v} = (v_1, v_2)
+\]</div>
+<section id="langkah-1-hitung-penjumlahan-vektor">
+<h4>Langkah 1: Hitung penjumlahan vektor<a class="headerlink" href="#langkah-1-hitung-penjumlahan-vektor" title="Link to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{u} + \mathbf{v} = (u_1 + v_1,\ u_2 + v_2)
+\]</div>
+</section>
+<section id="langkah-2-hitung-sisi-kiri-dari-sifat-additivitas">
+<h4>Langkah 2: Hitung sisi kiri dari sifat additivitas<a class="headerlink" href="#langkah-2-hitung-sisi-kiri-dari-sifat-additivitas" title="Link to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[
+T(\mathbf{u} + \mathbf{v}) = T(u_1 + v_1,\ u_2 + v_2)
+\]</div>
+<p>Definisi <span class="math notranslate nohighlight">\(T\)</span> mengatakan bahwa komponen pertama adalah penjumlahan dari dua komponen vektor input, dan komponen kedua adalah komponen pertama dari input itu sendiri. Maka:</p>
+<p>\begin{align*}
+T(\mathbf{u} + \mathbf{v})
+&amp;= ((u_1 + v_1) + (u_2 + v_2),\ u_1 + v_1) \
+&amp;= (u_1 + u_2 + v_1 + v_2,\ u_1 + v_1)
+\end{align*}</p>
+</section>
+<section id="langkah-3-hitung-sisi-kanan">
+<h4>Langkah 3: Hitung sisi kanan<a class="headerlink" href="#langkah-3-hitung-sisi-kanan" title="Link to this heading">#</a></h4>
+<p>Pertama, kita hitung:</p>
+<p>\begin{align*}
+T(\mathbf{u}) &amp;= (u_1 + u_2,\ u_1) \
+T(\mathbf{v}) &amp;= (v_1 + v_2,\ v_1)
+\end{align*}</p>
+<p>Kemudian jumlahkan kedua hasilnya:</p>
+<p>\begin{align*}
+T(\mathbf{u}) + T(\mathbf{v})
+&amp;= (u_1 + u_2 + v_1 + v_2,\ u_1 + v_1)
+\end{align*}</p>
+</section>
+<section id="kesimpulan-additivitas">
+<h4>Kesimpulan Additivitas:<a class="headerlink" href="#kesimpulan-additivitas" title="Link to this heading">#</a></h4>
+<p>Karena:</p>
+<div class="math notranslate nohighlight">
+\[
+T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
+\]</div>
+<p>maka <em>sifat additivitas terpenuhi</em>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="pembuktian-homogenitas">
+<h3>2. Pembuktian Homogenitas<a class="headerlink" href="#pembuktian-homogenitas" title="Link to this heading">#</a></h3>
+<p>Misalkan <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)\)</span> dan <span class="math notranslate nohighlight">\(c\)</span> adalah sembarang skalar di <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+<section id="langkah-1-hitung-perkalian-skalar">
+<h4>Langkah 1: Hitung perkalian skalar<a class="headerlink" href="#langkah-1-hitung-perkalian-skalar" title="Link to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[
+c \cdot \mathbf{u} = (cu_1,\ cu_2)
+\]</div>
+</section>
+<section id="langkah-2-hitung-sisi-kiri">
+<h4>Langkah 2: Hitung sisi kiri<a class="headerlink" href="#langkah-2-hitung-sisi-kiri" title="Link to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[
+T(c\mathbf{u}) = T(cu_1,\ cu_2)
+\]</div>
+<p>Menggunakan definisi <span class="math notranslate nohighlight">\(T\)</span>:</p>
+<p>\begin{align*}
+T(c\mathbf{u})
+&amp;= (cu_1 + cu_2,\ cu_1) \
+&amp;= c(u_1 + u_2,\ u_1)
+\end{align*}</p>
+</section>
+<section id="id1">
+<h4>Langkah 3: Hitung sisi kanan<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p>\begin{align*}
+T(\mathbf{u}) &amp;= (u_1 + u_2,\ u_1) \
+c \cdot T(\mathbf{u}) &amp;= c(u_1 + u_2,\ u_1) = (cu_1 + cu_2,\ cu_1)
+\end{align*}</p>
+</section>
+<section id="kesimpulan-homogenitas">
+<h4>Kesimpulan Homogenitas:<a class="headerlink" href="#kesimpulan-homogenitas" title="Link to this heading">#</a></h4>
+<p>Karena:</p>
+<div class="math notranslate nohighlight">
+\[
+T(c\mathbf{u}) = cT(\mathbf{u})
+\]</div>
+<p>maka <em>sifat homogenitas terpenuhi</em>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="kesimpulan-akhir">
+<h3>Kesimpulan Akhir:<a class="headerlink" href="#kesimpulan-akhir" title="Link to this heading">#</a></h3>
+<p>Karena transformasi <span class="math notranslate nohighlight">\(T\)</span> memenuhi:</p>
+<ul class="simple">
+<li><p><em>Additivitas</em>: <span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span></p></li>
+<li><p><em>Homogenitas</em>: <span class="math notranslate nohighlight">\(T(c\mathbf{u}) = cT(\mathbf{u})\)</span></p></li>
+</ul>
+<p>maka:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{T(v_1, v_2) = (v_1 + v_2,\ v_1) \text{ adalah transformasi linier}}
+\]</div>
+<hr class="docutils" />
+</section>
+</section>
+<hr class="docutils" />
+<section id="contoh-transformasi-refleksi-dengan-matriks-dan-titik">
+<h2>Contoh Transformasi Refleksi (Dengan Matriks dan Titik)<a class="headerlink" href="#contoh-transformasi-refleksi-dengan-matriks-dan-titik" title="Link to this heading">#</a></h2>
+<p>Berikut adalah contoh 2 titik untuk masing-masing jenis refleksi:</p>
+<hr class="docutils" />
+<section id="refleksi-terhadap-sumbu-x">
+<h3>1. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(x\)</span><a class="headerlink" href="#refleksi-terhadap-sumbu-x" title="Link to this heading">#</a></h3>
+<p>Matriks transformasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
+\end{split}\]</div>
+<p>Contoh titik:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A(2, 3) \rightarrow A'(2, -3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(B(-1, -4) \rightarrow B'(-1, 4)\)</span></p></li>
+</ul>
+<iframe src="https://www.geogebra.org/calculator/csfvpra4" width="600" height="400" style="border:0;"></iframe>
+</section>
+<hr class="docutils" />
+<section id="refleksi-terhadap-sumbu-y">
+<h3>2. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(y\)</span><a class="headerlink" href="#refleksi-terhadap-sumbu-y" title="Link to this heading">#</a></h3>
+<p>Matriks transformasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Contoh titik:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A(3, 2) \rightarrow A'(-3, 2)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(B(-2, -1) \rightarrow B'(2, -1)\)</span></p></li>
+</ul>
+<iframe src="https://www.geogebra.org/calculator/fsn5nrva" width="600" height="400" style="border:0;"></iframe>
+</section>
+<hr class="docutils" />
+<section id="refleksi-terhadap-garis-y-x">
+<h3>3. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = x\)</span><a class="headerlink" href="#refleksi-terhadap-garis-y-x" title="Link to this heading">#</a></h3>
+<p>Matriks transformasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Contoh titik:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A(1, 4) \rightarrow A'(4, 1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(B(-3, 2) \rightarrow B'(2, -3)\)</span></p></li>
+</ul>
+<iframe src="https://www.geogebra.org/calculator/qrbyjpfu" width="600" height="400" style="border:0;"></iframe>
+</section>
+<hr class="docutils" />
+<section id="id2">
+<h3>4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Matriks transformasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 0 &amp; -1 \\ -1 &amp; 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Contoh titik:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A(2, 5) \rightarrow A'(-5, -2)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(B(-1, -4) \rightarrow B'(4, 1)\)</span></p></li>
+</ul>
+<iframe src="https://www.geogebra.org/calculator/s7cmjmew" width="600" height="400" style="border:0;"></iframe>
+</section>
+<hr class="docutils" />
+<section id="refleksi-terhadap-titik-asal-origin">
+<h3>5. Refleksi terhadap titik asal (origin)<a class="headerlink" href="#refleksi-terhadap-titik-asal-origin" title="Link to this heading">#</a></h3>
+<p>Matriks transformasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} -1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
+\end{split}\]</div>
+<p>Contoh titik:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A(3, -2) \rightarrow A'(-3, 2)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(B(-5, 1) \rightarrow B'(5, -1)\)</span></p></li>
+</ul>
+<iframe src="https://www.geogebra.org/calculator/qyg5yjf9" width="600" height="400" style="border:0;"></iframe>
+<hr class="docutils" />
+</section>
+</section>
+<hr class="docutils" />
+<section id="penjelasan-refleksi-titik-terhadap-garis-y-2">
+<h2>Penjelasan Refleksi Titik terhadap Garis ( y = 2 )<a class="headerlink" href="#penjelasan-refleksi-titik-terhadap-garis-y-2" title="Link to this heading">#</a></h2>
+<p>Dalam transformasi geometri, refleksi titik terhadap suatu garis dapat dilakukan menggunakan matriks dan translasi. Pada kasus ini, kita akan merefleksikan titik terhadap garis horizontal ( y = 2 ). Berikut adalah penjelasan langkah-langkah yang diambil dalam proses refleksi tersebut.</p>
+<section id="langkah-1-matriks-refleksi-terhadap-sumbu-x">
+<h3>Langkah 1: Matriks Refleksi terhadap Sumbu-X<a class="headerlink" href="#langkah-1-matriks-refleksi-terhadap-sumbu-x" title="Link to this heading">#</a></h3>
+<p>Untuk refleksi terhadap garis horizontal ( y = 2 ), kita perlu menggunakan dua operasi dasar:</p>
+<ol class="arabic">
+<li><p><strong>Refleksi terhadap sumbu-X:</strong>
+Matriks refleksi terhadap sumbu-X membalikkan koordinat ( y ) dari titik yang diberikan. Matriks refleksi terhadap sumbu-X adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   B = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
+   \end{split}\]</div>
+<p>Matriks ini membalikkan koordinat ( y ), tetapi tidak mengubah ( x ).</p>
+</li>
+</ol>
+</section>
+<section id="langkah-2-translasi-untuk-menyesuaikan-dengan-garis-y-2">
+<h3>Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( y = 2 )<a class="headerlink" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-y-2" title="Link to this heading">#</a></h3>
+<p>Setelah refleksi terhadap sumbu-X, kita perlu melakukan <strong>translasi</strong> agar titik hasil refleksi berada pada posisi yang benar relatif terhadap garis ( y = 2 ). Garis ( y = 2 ) berada pada jarak 2 satuan di atas sumbu-X. Oleh karena itu, kita perlu menambahkan vektor translasi yang menggeser hasil refleksi ke posisi yang tepat.</p>
+<p>Vektor translasi yang digunakan adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+t = \begin{bmatrix} 0 \\ 4 \end{bmatrix}
+\end{split}\]</div>
+<p>Vektor ini menggeser titik hasil refleksi sebesar 4 satuan di atas sumbu-X untuk mencapai garis ( y = 2 ).</p>
+</section>
+<section id="langkah-3-menghitung-titik-refleksi">
+<h3>Langkah 3: Menghitung Titik Refleksi<a class="headerlink" href="#langkah-3-menghitung-titik-refleksi" title="Link to this heading">#</a></h3>
+<p>Titik asal yang akan direfleksikan adalah ( (x, y) = (1, 1) ). Proses refleksi dilakukan dengan matriks transformasi yang terdiri dari refleksi dan translasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = B \cdot \begin{bmatrix} x \\ y \end{bmatrix} + t
+\end{split}\]</div>
+<p>Substitusi koordinat ( (x, y) = (1, 1) ) ke dalam persamaan ini menghasilkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 1 \end{bmatrix} + \begin{bmatrix} 0 \\ 4 \end{bmatrix} = \begin{bmatrix} 1 \\ -1 \end{bmatrix} + \begin{bmatrix} 0 \\ 4 \end{bmatrix} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}
+\end{split}\]</div>
+<p>Dengan demikian, titik hasil refleksi adalah ( (1, 3) ).</p>
+</section>
+<section id="langkah-4-visualisasi-grafik">
+<h3>Langkah 4: Visualisasi Grafik<a class="headerlink" href="#langkah-4-visualisasi-grafik" title="Link to this heading">#</a></h3>
+<p>Untuk memvisualisasikan refleksi ini, kita menggambar titik asal dan titik hasil refleksi pada grafik. Titik asal diberi tanda merah (ro), dan titik hasil refleksi diberi tanda biru (bo). Garis ( y = 2 ) juga digambarkan sebagai garis hijau.</p>
+<section id="grafik">
+<h4>Grafik:<a class="headerlink" href="#grafik" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Titik asal:</strong> Titik ( (1, 1) ) digambarkan dengan tanda merah.</p></li>
+<li><p><strong>Titik hasil refleksi:</strong> Titik ( (1, 3) ) digambarkan dengan tanda biru.</p></li>
+<li><p><strong>Garis ( y = 2 ):</strong> Garis hitam sebagai garis refleksi.</p></li>
+<li><p><strong>Garis horizontal:</strong> Untuk menunjukkan sumbu X dan Y yang digunakan sebagai referensi.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">koordinats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">koordinats</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">koordinats</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">],[</span><span class="mi">4</span><span class="p">]])</span>
+<span class="n">B_trans</span> <span class="o">=</span> <span class="n">B</span> <span class="o">@</span> <span class="n">koordinats</span> <span class="o">+</span> <span class="n">t</span>
+
+<span class="n">x_LT2</span> <span class="o">=</span> <span class="n">B_trans</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span>
+<span class="n">y_LT2</span> <span class="o">=</span> <span class="n">B_trans</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_LT2</span><span class="p">,</span><span class="n">y_LT2</span><span class="p">,</span><span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_LT2</span><span class="p">,</span><span class="n">y_LT2</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;y=2&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Refleksi sumbu Y = 2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://hackmd.io/_uploads/HkuxZePgge.png" /></p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="penjelasan-refleksi-titik-terhadap-garis-x-2">
+<h2>Penjelasan Refleksi Titik terhadap Garis ( x = 2 )<a class="headerlink" href="#penjelasan-refleksi-titik-terhadap-garis-x-2" title="Link to this heading">#</a></h2>
+<p>Dalam transformasi geometri, refleksi titik terhadap suatu garis dapat dilakukan dengan menggunakan matriks refleksi dan translasi. Pada kasus ini, kita akan merefleksikan titik terhadap garis vertikal ( x = 2 ). Berikut adalah penjelasan langkah-langkah yang diambil dalam proses refleksi tersebut.</p>
+<section id="langkah-1-matriks-refleksi-terhadap-sumbu-y">
+<h3>Langkah 1: Matriks Refleksi terhadap Sumbu-Y<a class="headerlink" href="#langkah-1-matriks-refleksi-terhadap-sumbu-y" title="Link to this heading">#</a></h3>
+<p>Untuk refleksi terhadap garis vertikal ( x = 2 ), kita perlu menggunakan dua operasi dasar:</p>
+<ol class="arabic">
+<li><p><strong>Refleksi terhadap sumbu-Y:</strong>
+Matriks refleksi terhadap sumbu-Y membalikkan koordinat ( x ) dari titik yang diberikan. Matriks refleksi terhadap sumbu-Y adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   B = \begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+   \end{split}\]</div>
+<p>Matriks ini membalikkan koordinat ( x ), tetapi tidak mengubah ( y ).</p>
+</li>
+</ol>
+</section>
+<section id="langkah-2-translasi-untuk-menyesuaikan-dengan-garis-x-2">
+<h3>Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( x = 2 )<a class="headerlink" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-x-2" title="Link to this heading">#</a></h3>
+<p>Setelah refleksi terhadap sumbu-Y, kita perlu melakukan <strong>translasi</strong> agar titik hasil refleksi berada pada posisi yang benar relatif terhadap garis ( x = 2 ). Garis ( x = 2 ) berada pada jarak 2 satuan di sebelah kanan sumbu-Y. Oleh karena itu, kita perlu menambahkan vektor translasi yang menggeser hasil refleksi ke posisi yang tepat.</p>
+<p>Vektor translasi yang digunakan adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+t = \begin{bmatrix} 4 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Vektor ini menggeser titik hasil refleksi sebesar 4 satuan ke kanan sumbu-Y untuk mencapai garis ( x = 2 ).</p>
+</section>
+<section id="id3">
+<h3>Langkah 3: Menghitung Titik Refleksi<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Titik asal yang akan direfleksikan adalah ( (x, y) = (1, 1) ). Proses refleksi dilakukan dengan matriks transformasi yang terdiri dari refleksi dan translasi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = B \cdot \begin{bmatrix} x \\ y \end{bmatrix} + t
+\end{split}\]</div>
+<p>Substitusi koordinat ( (x, y) = (1, 1) ) ke dalam persamaan ini menghasilkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = \begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 1 \end{bmatrix} + \begin{bmatrix} 4 \\ 0 \end{bmatrix} = \begin{bmatrix} -1 \\ 1 \end{bmatrix} + \begin{bmatrix} 4 \\ 0 \end{bmatrix} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Dengan demikian, titik hasil refleksi adalah ( (3, 1) ).</p>
+</section>
+<section id="id4">
+<h3>Langkah 4: Visualisasi Grafik<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Untuk memvisualisasikan refleksi ini, kita menggambar titik asal dan titik hasil refleksi pada grafik. Titik asal diberi tanda merah (ro), dan titik hasil refleksi diberi tanda biru (bo). Garis ( x = 2 ) juga digambarkan sebagai garis hitam.</p>
+<section id="id5">
+<h4>Grafik:<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Titik asal:</strong> Titik ( (1, 1) ) digambarkan dengan tanda merah.</p></li>
+<li><p><strong>Titik hasil refleksi:</strong> Titik ( (3, 1) ) digambarkan dengan tanda biru.</p></li>
+<li><p><strong>Garis ( x = 2 ):</strong> Garis hitam sebagai garis refleksi.</p></li>
+<li><p><strong>Garis sumbu X dan Y:</strong> Untuk menunjukkan sumbu referensi.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">koordinats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">koordinats</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">koordinats</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">4</span><span class="p">],[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">B_trans</span> <span class="o">=</span> <span class="n">B</span> <span class="o">@</span> <span class="n">koordinats</span> <span class="o">+</span> <span class="n">t</span>
+
+<span class="n">x_LT2</span> <span class="o">=</span> <span class="n">B_trans</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span>
+<span class="n">y_LT2</span> <span class="o">=</span> <span class="n">B_trans</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_LT2</span><span class="p">,</span><span class="n">y_LT2</span><span class="p">,</span><span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_LT2</span><span class="p">,</span><span class="n">y_LT2</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;x=2&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Refleksi sumbu X = 2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://hackmd.io/_uploads/HJ_QWxveel.png" /></p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="penjelasan-refleksi-titik-terhadap-garis-y-x">
+<h2>Penjelasan Refleksi Titik terhadap Garis ( y = x )<a class="headerlink" href="#penjelasan-refleksi-titik-terhadap-garis-y-x" title="Link to this heading">#</a></h2>
+<p>Refleksi titik terhadap garis ( y = x ) adalah transformasi geometri di mana titik asal dipindahkan sehingga posisinya simetris terhadap garis tersebut. Untuk memahami proses ini, mari kita lihat langkah-langkah berikut.</p>
+<section id="langkah-1-matriks-refleksi-terhadap-garis-y-x">
+<h3>Langkah 1: Matriks Refleksi terhadap Garis ( y = x )<a class="headerlink" href="#langkah-1-matriks-refleksi-terhadap-garis-y-x" title="Link to this heading">#</a></h3>
+<p>Refleksi terhadap garis ( y = x ) dapat dilakukan dengan menggunakan matriks transformasi. Matriks refleksi untuk garis ( y = x ) dapat dinyatakan sebagai:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Matriks ini bertukar posisi komponen ( x ) dan ( y ) dari titik yang diberikan. Jadi, setelah diterapkan, koordinat titik ( (x, y) ) akan menjadi ( (y, x) ).</p>
+</section>
+<section id="langkah-2-menghitung-titik-refleksi">
+<h3>Langkah 2: Menghitung Titik Refleksi<a class="headerlink" href="#langkah-2-menghitung-titik-refleksi" title="Link to this heading">#</a></h3>
+<p>Titik asal yang akan direfleksikan adalah ( (x, y) = (1, 2) ). Proses refleksi dilakukan dengan mengalikan matriks refleksi ( B ) dengan vektor koordinat asal ( (x, y) ):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = B \cdot \begin{bmatrix} x \\ y \end{bmatrix}
+\end{split}\]</div>
+<p>Substitusi koordinat ( (x, y) = (1, 2) ) ke dalam persamaan ini menghasilkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B_{\text{trans}} = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 2 \end{bmatrix} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Dengan demikian, titik hasil refleksi adalah ( (2, 1) ).</p>
+</section>
+<section id="langkah-3-visualisasi-grafik">
+<h3>Langkah 3: Visualisasi Grafik<a class="headerlink" href="#langkah-3-visualisasi-grafik" title="Link to this heading">#</a></h3>
+<p>Untuk memvisualisasikan refleksi ini, kita menggambar titik asal dan titik hasil refleksi pada grafik. Titik asal diberi tanda merah (ro), dan titik hasil refleksi diberi tanda biru (bo). Garis ( y = x ) digambarkan sebagai garis hitam.</p>
+<section id="id6">
+<h4>Grafik:<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Titik asal:</strong> Titik ( (1, 2) ) digambarkan dengan tanda merah.</p></li>
+<li><p><strong>Titik hasil refleksi:</strong> Titik ( (2, 1) ) digambarkan dengan tanda biru.</p></li>
+<li><p><strong>Garis ( y = x ):</strong> Garis hitam sebagai garis refleksi.</p></li>
+<li><p><strong>Garis sumbu X dan Y:</strong> Untuk menunjukkan sumbu referensi.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">koordinats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">koordinats</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">koordinats</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">B_trans</span> <span class="o">=</span> <span class="n">B</span> <span class="o">@</span> <span class="n">koordinats</span>
+
+<span class="n">x_LT2</span> <span class="o">=</span> <span class="n">B_trans</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span>
+<span class="n">y_LT2</span> <span class="o">=</span> <span class="n">B_trans</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_LT2</span><span class="p">,</span><span class="n">y_LT2</span><span class="p">,</span><span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_LT2</span><span class="p">,</span><span class="n">y_LT2</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;y=x&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Refleksi terhadap garis y = x&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://hackmd.io/_uploads/BkDEWePgxg.png" /></p>
+</section>
+</section>
 </section>
 </section>
 
@@ -843,6 +1333,61 @@ A
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengerjakan-halaman-239">Mengerjakan Halaman 239</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-transformasi-linier">Pembuktian Transformasi Linier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-additivitas">1. Pembuktian Additivitas</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-penjumlahan-vektor">Langkah 1: Hitung penjumlahan vektor</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-sisi-kiri-dari-sifat-additivitas">Langkah 2: Hitung sisi kiri dari sifat additivitas</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-hitung-sisi-kanan">Langkah 3: Hitung sisi kanan</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-additivitas">Kesimpulan Additivitas:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-homogenitas">2. Pembuktian Homogenitas</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-perkalian-skalar">Langkah 1: Hitung perkalian skalar</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-sisi-kiri">Langkah 2: Hitung sisi kiri</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Langkah 3: Hitung sisi kanan</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-homogenitas">Kesimpulan Homogenitas:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-akhir">Kesimpulan Akhir:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-transformasi-refleksi-dengan-matriks-dan-titik">Contoh Transformasi Refleksi (Dengan Matriks dan Titik)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-x">1. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(x\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-sumbu-y">2. Refleksi terhadap sumbu-<span class="math notranslate nohighlight">\(y\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-garis-y-x">3. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = x\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4. Refleksi terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi-terhadap-titik-asal-origin">5. Refleksi terhadap titik asal (origin)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-refleksi-titik-terhadap-garis-y-2">Penjelasan Refleksi Titik terhadap Garis ( y = 2 )</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-sumbu-x">Langkah 1: Matriks Refleksi terhadap Sumbu-X</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-y-2">Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( y = 2 )</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-menghitung-titik-refleksi">Langkah 3: Menghitung Titik Refleksi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-visualisasi-grafik">Langkah 4: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grafik">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-refleksi-titik-terhadap-garis-x-2">Penjelasan Refleksi Titik terhadap Garis ( x = 2 )</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-sumbu-y">Langkah 1: Matriks Refleksi terhadap Sumbu-Y</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-translasi-untuk-menyesuaikan-dengan-garis-x-2">Langkah 2: Translasi untuk Menyesuaikan dengan Garis ( x = 2 )</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Langkah 3: Menghitung Titik Refleksi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Langkah 4: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-refleksi-titik-terhadap-garis-y-x">Penjelasan Refleksi Titik terhadap Garis ( y = x )</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-matriks-refleksi-terhadap-garis-y-x">Langkah 1: Matriks Refleksi terhadap Garis ( y = x )</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-menghitung-titik-refleksi">Langkah 2: Menghitung Titik Refleksi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-visualisasi-grafik">Langkah 3: Visualisasi Grafik</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Grafik:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
