@@ -486,27 +486,33 @@ $$
 
 Definisi $T$ mengatakan bahwa komponen pertama adalah penjumlahan dari dua komponen vektor input, dan komponen kedua adalah komponen pertama dari input itu sendiri. Maka:
 
+$$
 \begin{align*}
 T(\mathbf{u} + \mathbf{v}) 
 &= ((u_1 + v_1) + (u_2 + v_2),\ u_1 + v_1) \\
 &= (u_1 + u_2 + v_1 + v_2,\ u_1 + v_1)
 \end{align*}
+$$
 
 #### Langkah 3: Hitung sisi kanan
 
 Pertama, kita hitung:
 
+$$
 \begin{align*}
 T(\mathbf{u}) &= (u_1 + u_2,\ u_1) \\
 T(\mathbf{v}) &= (v_1 + v_2,\ v_1)
 \end{align*}
+$$
 
 Kemudian jumlahkan kedua hasilnya:
 
+$$
 \begin{align*}
 T(\mathbf{u}) + T(\mathbf{v}) 
 &= (u_1 + u_2 + v_1 + v_2,\ u_1 + v_1)
 \end{align*}
+$$
 
 #### Kesimpulan Additivitas:
 
@@ -538,18 +544,22 @@ $$
 
 Menggunakan definisi $T$:
 
+$$
 \begin{align*}
 T(c\mathbf{u}) 
 &= (cu_1 + cu_2,\ cu_1) \\
 &= c(u_1 + u_2,\ u_1)
 \end{align*}
+$$
 
 #### Langkah 3: Hitung sisi kanan
 
+$$
 \begin{align*}
 T(\mathbf{u}) &= (u_1 + u_2,\ u_1) \\
 c \cdot T(\mathbf{u}) &= c(u_1 + u_2,\ u_1) = (cu_1 + cu_2,\ cu_1)
 \end{align*}
+$$
 
 #### Kesimpulan Homogenitas:
 
@@ -775,7 +785,7 @@ ax.set_title("Refleksi terhadap Sumbu Y = 2")
 ax.legend()
 ```
 
-![alt text](image.png)
+![image](https://hackmd.io/_uploads/rJZbQzweex.png)
 
 
 ---
@@ -879,7 +889,7 @@ ax.legend()
 ```
 
 
-![alt text](image-1.png)
+![image](https://hackmd.io/_uploads/BkXm7zPggg.png)
 
 
 ---
@@ -967,4 +977,5 @@ ax.legend()
 
 ```
 
-![alt text](image-2.png)
+
+![image](https://hackmd.io/_uploads/rJK4Qfvelg.png)
