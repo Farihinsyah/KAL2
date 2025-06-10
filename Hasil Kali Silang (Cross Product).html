@@ -384,13 +384,22 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat">Sifat-sifat:</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-perkalian-silang">Sifat-sifat Perkalian Silang</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1">Contoh 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2">Contoh 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3">Contoh 3</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-soal-1-luas-jajaran-genjang-dan-segitiga">Penyelesaian Soal 1 – Luas Jajaran Genjang dan Segitiga</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi">Implementasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-jajaran-genjang">Luas Jajaran Genjang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-paralelepiped">Volume Paralelepiped</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-menghitung-volume-paralelepiped">Contoh: Menghitung Volume Paralelepiped</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-penyelesaian-soal">Tugas Penyelesaian Soal</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1">Soal 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian">Penyelesaian:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2">Soal 2</a></li>
@@ -445,22 +454,58 @@ v_1 &amp; v_2 &amp; v_3
 = (u_2v_3 - u_3v_2)\hat{i} - (u_1v_3 - u_3v_1)\hat{j} + (u_1v_2 - u_2v_1)\hat{k}
 \end{split}\]</div>
 </section>
-<section id="sifat-sifat">
-<h2>Sifat-sifat:<a class="headerlink" href="#sifat-sifat" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})\)</span></p></li>
-<li><p>Jika <span class="math notranslate nohighlight">\(\vec{a}\)</span> dan <span class="math notranslate nohighlight">\(\vec{b}\)</span> sejajar, maka <span class="math notranslate nohighlight">\(\vec{a} \times \vec{b} = \vec{0}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\vec{a} \times \vec{a} = \vec{0}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(|\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin\theta\)</span></p></li>
-</ul>
+<hr class="docutils" />
+<section id="sifat-sifat-perkalian-silang">
+<h2>Sifat-sifat Perkalian Silang<a class="headerlink" href="#sifat-sifat-perkalian-silang" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Sifat Antikomutatif (Anticommutative Property)</strong><br />
+$<span class="math notranslate nohighlight">\(
+\vec{u} \times \vec{v} = -(\vec{v} \times \vec{u})
+\)</span>$</p></li>
+<li><p><strong>Sifat Distributif terhadap Penjumlahan (Distributive Properties)</strong><br />
+a.
+$<span class="math notranslate nohighlight">\(
+(\vec{u} + \vec{v}) \times \vec{w} = \vec{u} \times \vec{w} + \vec{v} \times \vec{w}
+\)</span><span class="math notranslate nohighlight">\(
+b. 
+\)</span><span class="math notranslate nohighlight">\(
+\vec{u} \times (\vec{v} + \vec{w}) = \vec{u} \times \vec{v} + \vec{u} \times \vec{w}
+\)</span>$</p></li>
+<li><p><strong>Sifat Asosiatif terhadap Perkalian Skalar</strong><br />
+$<span class="math notranslate nohighlight">\(
+c(\vec{u} \times \vec{v}) = (c\vec{u}) \times \vec{v} = \vec{u} \times (c\vec{v})
+\)</span>$</p></li>
+<li><p><strong>Sifat Ortogonalitas (Orthogonality Properties)</strong><br />
+a.
+$<span class="math notranslate nohighlight">\(
+(\vec{u} \times \vec{v}) \cdot \vec{u} = 0
+\)</span><span class="math notranslate nohighlight">\(
+b. 
+\)</span><span class="math notranslate nohighlight">\(
+(\vec{u} \times \vec{v}) \cdot \vec{v} = 0
+\)</span>$</p></li>
+<li><p><strong>Perkalian Silang Vektor dengan Dirinya Sendiri</strong><br />
+$<span class="math notranslate nohighlight">\(
+\vec{u} \times \vec{u} = \vec{0}
+\)</span>$</p></li>
+<li><p><strong>Perkalian Silang dengan Vektor Nol</strong><br />
+$<span class="math notranslate nohighlight">\(
+\vec{u} \times \vec{0} = \vec{0}
+\)</span>$</p></li>
+<li><p><strong>Triple Scalar Product (Perkalian Titik dari Perkalian Silang)</strong><br />
+$<span class="math notranslate nohighlight">\(
+\vec{u} \cdot (\vec{v} \times \vec{w}) = (\vec{u} \times \vec{v}) \cdot \vec{w}
+\)</span>$</p></li>
+</ol>
 <hr class="docutils" />
 <section id="contoh-1">
 <h3>Contoh 1<a class="headerlink" href="#contoh-1" title="Link to this heading">#</a></h3>
-<p>Misalkan:
-$<span class="math notranslate nohighlight">\(
+<p>Misalkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \mathbf{u} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \quad
 \mathbf{v} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
-\)</span>$</p>
+\end{split}\]</div>
 <iframe src="https://www.geogebra.org/classic/dpdpqwyq" width="600" height="400" style="border:0;"></iframe>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -472,16 +517,14 @@ v_1 &amp; v_2 &amp; v_3
 \end{vmatrix}
 = (u_2v_3 - u_3v_2)\hat{i} - (u_1v_3 - u_3v_1)\hat{j} + (u_1v_2 - u_2v_1)\hat{k}
 \end{split}\]</div>
-<p>Hitung:
-$<span class="math notranslate nohighlight">\(
+<p>Hitung:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 0 \cdot 0 - 0 \cdot 1 \\
 -(1 \cdot 0 - 0 \cdot 0) \\
 1 \cdot 1 - 0 \cdot 0
-\end{bmatrix}
-\)</span>$</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+\end{bmatrix} =
 \begin{bmatrix}
 0 \\
 0 \\
@@ -492,11 +535,12 @@ $<span class="math notranslate nohighlight">\(
 <hr class="docutils" />
 <section id="contoh-2">
 <h3>Contoh 2<a class="headerlink" href="#contoh-2" title="Link to this heading">#</a></h3>
-<p>Misalkan:
-$<span class="math notranslate nohighlight">\(
+<p>Misalkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \mathbf{u} = \begin{bmatrix} 2 \\ 3 \\ 4 \end{bmatrix}, \quad
 \mathbf{v} = \begin{bmatrix} 5 \\ 6 \\ 7 \end{bmatrix}
-\)</span>$</p>
+\end{split}\]</div>
 <iframe src="https://www.geogebra.org/classic/s2tcbt9f" width="600" height="400" style="border:0;"></iframe>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -508,24 +552,19 @@ v_1 &amp; v_2 &amp; v_3
 \end{vmatrix}
 = (u_2v_3 - u_3v_2)\hat{i} - (u_1v_3 - u_3v_1)\hat{j} + (u_1v_2 - u_2v_1)\hat{k}
 \end{split}\]</div>
-<p>Hitung:
-$<span class="math notranslate nohighlight">\(
+<p>Hitung:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 3 \cdot 7 - 4 \cdot 6 \\
 -(2 \cdot 7 - 4 \cdot 5) \\
 2 \cdot 6 - 3 \cdot 5
-\end{bmatrix}
-\)</span>$</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+\end{bmatrix} =
 \begin{bmatrix}
 21 - 24 \\
 -(14 - 20) \\
 12 - 15
-\end{bmatrix}
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+\end{bmatrix} =
 \begin{bmatrix}
 -3 \\
 6 \\
@@ -553,8 +592,9 @@ v_1 &amp; v_2 &amp; v_3
 \end{vmatrix}
 = (u_2v_3 - u_3v_2)\hat{i} - (u_1v_3 - u_3v_1)\hat{j} + (u_1v_2 - u_2v_1)\hat{k}
 \end{split}\]</div>
-<p>Hitung:
-$<span class="math notranslate nohighlight">\(
+<p>Hitung:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 1 . 1 - 1 . 1 \\
 -(1 . 1 - 1 . 2) \\
@@ -563,37 +603,134 @@ $<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
 0 \\ 1 \\ -1
 \end{bmatrix}
-\)</span>$</p>
+\end{split}\]</div>
 </section>
 </section>
 <hr class="docutils" />
-<section id="penyelesaian-soal-1-luas-jajaran-genjang-dan-segitiga">
-<h2>Penyelesaian Soal 1 – Luas Jajaran Genjang dan Segitiga<a class="headerlink" href="#penyelesaian-soal-1-luas-jajaran-genjang-dan-segitiga" title="Link to this heading">#</a></h2>
+<section id="implementasi">
+<h2>Implementasi<a class="headerlink" href="#implementasi" title="Link to this heading">#</a></h2>
+<section id="luas-jajaran-genjang">
+<h3>Luas Jajaran Genjang<a class="headerlink" href="#luas-jajaran-genjang" title="Link to this heading">#</a></h3>
+<p>Secara geometri, luas jajaran genjang adalah <span class="math notranslate nohighlight">\(A = b h\)</span>, di mana <span class="math notranslate nohighlight">\(b\)</span> adalah panjang alas dan <span class="math notranslate nohighlight">\(h\)</span> adalah tinggi jajaran genjang, seperti yang ditunjukkan dalam <strong>Gambar (a)</strong>.</p>
+<p>Ketika kita mendefinisikan <strong>aturan jajaran genjang penjumlahan vektor</strong>, dua vektor <span class="math notranslate nohighlight">\(\vec{u}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}\)</span> membentuk jajaran genjang jika ditarik dari titik awal yang sama, seperti dalam <strong>Gambar (b)</strong>.</p>
+<p>Trigonometri mengatakan bahwa <span class="math notranslate nohighlight">\(h = \|\vec{v}\| \sin(\theta)\)</span>, sehingga luas jajaran genjang adalah:</p>
+<div class="math notranslate nohighlight">
+\[
+A = \|\vec{u}\| \|\vec{v}\| \sin(\theta) = \|\vec{u} \times \vec{v}\|
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="contoh">
+<h3>Contoh<a class="headerlink" href="#contoh" title="Link to this heading">#</a></h3>
+<p>Tentukan luas jajaran genjang yang ditentukan oleh:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}, \quad
+\vec{v} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}
+\end{split}\]</div>
+<p>Penyelesaiannya adalah dengan memandang <span class="math notranslate nohighlight">\(\vec{u}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}\)</span> sebagai vektor di bidang <span class="math notranslate nohighlight">\(xy\)</span> dari <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, dan menulis ulang:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} = \begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix}, \quad
+\vec{v} = \begin{bmatrix} 1 \\ 3 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Kini kita dapat menghitung hasil kali silang:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+2 &amp; 1 &amp; 0 \\
+1 &amp; 3 &amp; 0
+\end{vmatrix} =
+(1 \cdot 0 - 0 \cdot 3)\hat{i} - (2 \cdot 0 - 0 \cdot 1)\hat{j} + (2 \cdot 3 - 1 \cdot 1)\hat{k}
+= \begin{bmatrix} 0 \\ 0 \\ 5 \end{bmatrix}
+\end{split}\]</div>
+<p>Oleh karena itu:</p>
+<div class="math notranslate nohighlight">
+\[
+A = \|\vec{u} \times \vec{v}\| = 5
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="volume-paralelepiped">
+<h2>Volume Paralelepiped<a class="headerlink" href="#volume-paralelepiped" title="Link to this heading">#</a></h2>
+<p><strong>Paralelepiped</strong> adalah bangun ruang tiga dimensi yang dibentuk oleh enam buah jajaran genjang.</p>
+<p>Volume paralelepiped yang ditentukan oleh tiga vektor <span class="math notranslate nohighlight">\(\vec{u}, \vec{v}, \vec{w}\)</span> diberikan oleh:</p>
+<div class="math notranslate nohighlight">
+\[
+V = |\vec{u} \cdot (\vec{v} \times \vec{w})|
+\]</div>
+<hr class="docutils" />
+<section id="contoh-menghitung-volume-paralelepiped">
+<h3>Contoh: Menghitung Volume Paralelepiped<a class="headerlink" href="#contoh-menghitung-volume-paralelepiped" title="Link to this heading">#</a></h3>
+<p>Tentukan volume paralelepiped yang ditentukan oleh vektor:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \quad
+\vec{v} = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, \quad
+\vec{w} = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Langkah pertama: Hitung <span class="math notranslate nohighlight">\(\vec{v} \times \vec{w}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v} \times \vec{w} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1
+\end{vmatrix} =
+(1 \cdot 1 - 0 \cdot 1)\hat{i} - (1 \cdot 1 - 0 \cdot 0)\hat{j} + (1 \cdot 1 - 1 \cdot 0)\hat{k}
+= \begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Kemudian, hitung:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} \cdot (\vec{v} \times \vec{w}) = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix} = 1
+\end{split}\]</div>
+<p>Oleh karena itu:</p>
+<div class="math notranslate nohighlight">
+\[
+V = |\vec{u} \cdot (\vec{v} \times \vec{w})| = |1| = 1 \quad \text{satuan kubik}
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tugas-penyelesaian-soal">
+<h2>Tugas Penyelesaian Soal<a class="headerlink" href="#tugas-penyelesaian-soal" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
 <section id="soal-1">
 <h3>Soal 1<a class="headerlink" href="#soal-1" title="Link to this heading">#</a></h3>
-<p>Diketahui vektor <span class="math notranslate nohighlight">\(\vec{u} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}\)</span>.</p>
-<p>Hitunglah luas jajaran genjang yang dibentuk oleh kedua vektor tersebut.</p>
+<p>Tentukan luas jajaran genjang yang ditentukan oleh vektor <span class="math notranslate nohighlight">\(\vec{u} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}\)</span>.</p>
 </section>
 <section id="penyelesaian">
 <h3>Penyelesaian:<a class="headerlink" href="#penyelesaian" title="Link to this heading">#</a></h3>
-<p>Untuk <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, luas jajaran genjang diberikan oleh:
-$<span class="math notranslate nohighlight">\(
+<p>Untuk <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, luas jajaran genjang diberikan oleh:</p>
+<div class="math notranslate nohighlight">
+\[
 L = |\vec{u} \times \vec{v}| = |u_1 v_2 - u_2 v_1|
-\)</span>$</p>
-<p>Substitusikan nilai:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Substitusikan nilai:</p>
+<div class="math notranslate nohighlight">
+\[
 L = |1 \cdot 1 - 2 \cdot 2| = |1 - 4| = |-3| = 3
-\)</span>$</p>
+\]</div>
 <p><strong>Jawaban: Luas = 3</strong></p>
 </section>
 <hr class="docutils" />
 <section id="soal-2">
 <h3>Soal 2<a class="headerlink" href="#soal-2" title="Link to this heading">#</a></h3>
-<p>Diketahui <span class="math notranslate nohighlight">\(\vec{u} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}\)</span>.</p>
+<p>Tentukan luas jajaran genjang yang ditentukan oleh vektor <span class="math notranslate nohighlight">\(\vec{u} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}\)</span>.</p>
 </section>
 <section id="id1">
 <h3>Penyelesaian:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Untuk <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, luas jajaran genjang diberikan oleh:</p>
+<div class="math notranslate nohighlight">
+\[
+L = |\vec{u} \times \vec{v}| = |u_1 v_2 - u_2 v_1|
+\]</div>
+<p>Substitusikan nilai:</p>
 <div class="math notranslate nohighlight">
 \[
 L = |u_1 v_2 - u_2 v_1| = |2 \cdot 3 - 0 \cdot 0| = |6 - 0| = 6
@@ -603,14 +740,15 @@ L = |u_1 v_2 - u_2 v_1| = |2 \cdot 3 - 0 \cdot 0| = |6 - 0| = 6
 <hr class="docutils" />
 <section id="soal-3">
 <h3>Soal 3<a class="headerlink" href="#soal-3" title="Link to this heading">#</a></h3>
-<p>Diketahui tiga titik sudut segitiga: <span class="math notranslate nohighlight">\(A = (0, 0, 0)\)</span>, <span class="math notranslate nohighlight">\(B = (1, 3, -1)\)</span>, dan <span class="math notranslate nohighlight">\(C = (2, 1, 1)\)</span>.</p>
+<p>Tentukan luas segitiga dengan titik-titik sudut (0, 0, 0), (1, 3, -1), dan (2, 1, 1).</p>
 </section>
 <section id="id2">
 <h3>Penyelesaian:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>Vektor <span class="math notranslate nohighlight">\(\vec{AB} = B - A = \langle 1, 3, -1 \rangle\)</span><br />
 Vektor <span class="math notranslate nohighlight">\(\vec{AC} = C - A = \langle 2, 1, 1 \rangle\)</span></p>
-<p>Hitung perkalian silang:
-$<span class="math notranslate nohighlight">\(
+<p>Hitung perkalian silang:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \vec{AB} \times \vec{AC} =
 \begin{vmatrix}
 \hat{i} &amp; \hat{j} &amp; \hat{k} \\
@@ -618,27 +756,30 @@ $<span class="math notranslate nohighlight">\(
 2 &amp; 1 &amp; 1
 \end{vmatrix}
 = (3 \cdot 1 - (-1) \cdot 1)\hat{i} - (1 \cdot 1 - (-1) \cdot 2)\hat{j} + (1 \cdot 1 - 3 \cdot 2)\hat{k}
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
 = (3 + 1)\hat{i} - (1 + 2)\hat{j} + (1 - 6)\hat{k} = 4\hat{i} - 3\hat{j} - 5\hat{k}
-\)</span>$</p>
-<p>Luas segitiga:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Luas segitiga:</p>
+<div class="math notranslate nohighlight">
+\[
 L = \frac{1}{2} \left\| \vec{AB} \times \vec{AC} \right\| = \frac{1}{2} \sqrt{4^2 + (-3)^2 + (-5)^2} = \frac{1}{2} \sqrt{16 + 9 + 25} = \frac{1}{2} \sqrt{50} = \frac{5\sqrt{2}}{1}
-\)</span>$</p>
+\]</div>
 <p><strong>Jawaban: Luas = <span class="math notranslate nohighlight">\(\frac{5\sqrt{2}}{1}\)</span></strong></p>
 </section>
 <hr class="docutils" />
 <section id="soal-4">
 <h3>Soal 4<a class="headerlink" href="#soal-4" title="Link to this heading">#</a></h3>
-<p>Diketahui titik-titik: <span class="math notranslate nohighlight">\(A = (5, 2, -1)\)</span>, <span class="math notranslate nohighlight">\(B = (3, 6, 2)\)</span>, <span class="math notranslate nohighlight">\(C = (1, 0, 4)\)</span></p>
+<p>Tentukan luas segitiga dengan titik-titik sudut (5, 2, -1), (3, 6, 2), dan (1, 0, 4)</p>
 </section>
 <section id="id3">
 <h3>Penyelesaian:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p><span class="math notranslate nohighlight">\(\vec{AB} = B - A = \langle -2, 4, 3 \rangle\)</span><br />
 <span class="math notranslate nohighlight">\(\vec{AC} = C - A = \langle -4, -2, 5 \rangle\)</span></p>
-<p>Perkalian silang:
-$<span class="math notranslate nohighlight">\(
+<p>Perkalian silang:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \vec{AB} \times \vec{AC} =
 \begin{vmatrix}
 \hat{i} &amp; \hat{j} &amp; \hat{k} \\
@@ -646,21 +787,24 @@ $<span class="math notranslate nohighlight">\(
 -4 &amp; -2 &amp; 5
 \end{vmatrix}
 = (4 \cdot 5 - 3 \cdot (-2))\hat{i} - (-2 \cdot 5 - 3 \cdot (-4))\hat{j} + (-2 \cdot (-2) - 4 \cdot (-4))\hat{k}
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
 = (20 + 6)\hat{i} - (-10 + 12)\hat{j} + (4 + 16)\hat{k}
 = 26\hat{i} - 2\hat{j} + 20\hat{k}
-\)</span>$</p>
-<p>Luas segitiga:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Luas segitiga:</p>
+<div class="math notranslate nohighlight">
+\[
 L = \frac{1}{2} \left\| \vec{AB} \times \vec{AC} \right\| = \frac{1}{2} \sqrt{26^2 + (-2)^2 + 20^2}
 = \frac{1}{2} \sqrt{676 + 4 + 400} = \frac{1}{2} \sqrt{1080}
 = \frac{\sqrt{1080}}{2}
-\)</span>$</p>
-<p>Sederhanakan:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Sederhanakan:</p>
+<div class="math notranslate nohighlight">
+\[
 \sqrt{1080} = \sqrt{36 \cdot 30} = 6\sqrt{30}
-\)</span>$</p>
+\]</div>
 <p><strong>Jawaban: Luas = <span class="math notranslate nohighlight">\(3\sqrt{30}\)</span></strong></p>
 </section>
 </section>
@@ -722,13 +866,22 @@ $<span class="math notranslate nohighlight">\(
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat">Sifat-sifat:</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-perkalian-silang">Sifat-sifat Perkalian Silang</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1">Contoh 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2">Contoh 2</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3">Contoh 3</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-soal-1-luas-jajaran-genjang-dan-segitiga">Penyelesaian Soal 1 – Luas Jajaran Genjang dan Segitiga</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi">Implementasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-jajaran-genjang">Luas Jajaran Genjang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-paralelepiped">Volume Paralelepiped</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-menghitung-volume-paralelepiped">Contoh: Menghitung Volume Paralelepiped</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-penyelesaian-soal">Tugas Penyelesaian Soal</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1">Soal 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian">Penyelesaian:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2">Soal 2</a></li>
