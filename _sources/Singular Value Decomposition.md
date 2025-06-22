@@ -55,7 +55,8 @@ $A = U \Sigma V^T$
 
 Karena $A$ simetris, maka:
 
-$A^T A = A A^T$ =
+$A^T A = A A^T$
+
 $$
 \begin{bmatrix} 3 & 1 \\ 1 & 3 \end{bmatrix}
 \begin{bmatrix} 3 & 1 \\ 1 & 3 \end{bmatrix} =
@@ -203,13 +204,13 @@ Gunakan rumus kuadrat:
 
 $\lambda = \frac{87 \pm \sqrt{87^2 - 4 \cdot 1062}}{2} = \frac{87 \pm \sqrt{7569 - 4248}}{2} = \frac{87 \pm \sqrt{3321}}{2}$
 
-$\Rightarrow \lambda_1 \approx 72.3,\quad \lambda_2 \approx 14.7$
+$\Rightarrow \lambda_1 = 72.3,\quad \lambda_2 = 14.7$
 
 ---
 
 ### Langkah 3: Nilai singular
 
-$\sigma_1 = \sqrt{72.3} \approx 8.5,\quad \sigma_2 = \sqrt{14.7} \approx 3.8$
+$\sigma_1 = \sqrt{72.3} = 8.5,\quad \sigma_2 = \sqrt{14.7} = 3.8$
 
 Maka matriks $\Sigma$ berukuran $3 \times 2$ adalah:
 
@@ -225,13 +226,13 @@ $\Sigma = \begin{bmatrix}
 
 Gunakan nilai eigen $\lambda$ untuk mencari vektor eigen dari $A^T A$.
 
-Untuk $\lambda_1 \approx 72.3$, kita peroleh vektor eigen:
+Untuk $\lambda_1 = 72.3$, kita peroleh vektor eigen:
 
-$v_1 \approx \begin{bmatrix} 0.316 \\ 0.949 \end{bmatrix}$
+$v_1 = \begin{bmatrix} 0.316 \\ 0.949 \end{bmatrix}$
 
-Untuk $\lambda_2 \approx 14.7$, diperoleh vektor eigen ortonormal:
+Untuk $\lambda_2 = 14.7$, diperoleh vektor eigen ortonormal:
 
-$v_2 \approx \begin{bmatrix} 0.949 \\ -0.316 \end{bmatrix}$
+$v_2 = \begin{bmatrix} 0.949 \\ -0.316 \end{bmatrix}$
 
 Sehingga matriks $V$ adalah:
 
@@ -248,9 +249,9 @@ $u_i = \frac{1}{\sigma_i} A v_i$
 
 Misalnya:
 
-$u_1 = \frac{1}{8.5} A v_1 \Rightarrow u_1 \approx \begin{bmatrix} 0.428 \\ 0.667 \\ 0.607 \end{bmatrix}$
+$u_1 = \frac{1}{8.5} A v_1 \Rightarrow u_1 = \begin{bmatrix} 0.428 \\ 0.667 \\ 0.607 \end{bmatrix}$
 
-$u_2 = \frac{1}{3.8} A v_2 \Rightarrow u_2 \approx \begin{bmatrix} -0.562 \\ 0.430 \\ -0.705 \end{bmatrix}$
+$u_2 = \frac{1}{3.8} A v_2 \Rightarrow u_2 = \begin{bmatrix} -0.562 \\ 0.430 \\ -0.705 \end{bmatrix}$
 
 Lengkapi $U$ menjadi ortonormal $3 \times 3$ (misalnya dengan Gram-Schmidt), tapi untuk SVD, hanya dua kolom pertama yang dipakai.
 
@@ -262,7 +263,7 @@ $A = U \Sigma V^T$
 
 Dengan:
 
-- $U \approx \begin{bmatrix}
+- $U = \begin{bmatrix}
 0.428 & -0.562 & u_3 \\
 0.667 &  0.430 & u_3 \\
 0.607 & -0.705 & u_3
